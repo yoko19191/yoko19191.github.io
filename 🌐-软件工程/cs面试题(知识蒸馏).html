@@ -1,0 +1,1092 @@
+<!DOCTYPE html> <html><head>
+		<title>CS面试题(知识蒸馏)</title>
+		<base href="../">
+		<meta id="root-path" root-path="../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="🌱 Digital-Garden - CS面试题(知识蒸馏)">
+		<meta property="og:title" content="CS面试题(知识蒸馏)">
+		<meta property="og:description" content="🌱 Digital-Garden - CS面试题(知识蒸馏)">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="🌐-软件工程/cs面试题(知识蒸馏).html">
+		<meta property="og:image" content="https://cdn.sa.net/2024/07/28/68lQnaCWcvJiu3o.png">
+		<meta property="og:site_name" content="🌱 Digital-Garden">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager native-scrollbars theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c1D445.TEX-I::before { padding: 0.683em 0.759em 0.021em 0px; content: "R"; }
+mjx-c.mjx-c1D45D.TEX-I::before { padding: 0.442em 0.503em 0.194em 0px; content: "p"; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-c.mjx-c1D442.TEX-I::before { padding: 0.704em 0.763em 0.022em 0px; content: "O"; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
+mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c22C5::before { padding: 0.31em 0.278em 0px 0px; content: "⋅"; }
+mjx-c.mjx-c210E.TEX-I::before { padding: 0.694em 0.576em 0.011em 0px; content: "h"; }
+mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
+mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
+mjx-c.mjx-c6C::before { padding: 0.694em 0.278em 0px 0px; content: "l"; }
+mjx-c.mjx-c67::before { padding: 0.453em 0.5em 0.206em 0px; content: "g"; }
+mjx-c.mjx-c2061::before { padding: 0px; content: ""; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > * { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.06em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-msqrt { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-c.mjx-c41::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
+mjx-c.mjx-c74::before { padding: 0.615em 0.389em 0.01em 0px; content: "t"; }
+mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
+mjx-c.mjx-c69::before { padding: 0.669em 0.278em 0px 0px; content: "i"; }
+mjx-c.mjx-c6F::before { padding: 0.448em 0.5em 0.01em 0px; content: "o"; }
+mjx-c.mjx-c1D444.TEX-I::before { padding: 0.704em 0.791em 0.194em 0px; content: "Q"; }
+mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-c.mjx-c1D43E.TEX-I::before { padding: 0.683em 0.889em 0px 0px; content: "K"; }
+mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
+mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
+mjx-c.mjx-c66::before { padding: 0.705em 0.372em 0px 0px; content: "f"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
+mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-c.mjx-c1D458.TEX-I::before { padding: 0.694em 0.521em 0.011em 0px; content: "k"; }
+mjx-c.mjx-c3A6::before { padding: 0.683em 0.722em 0px 0px; content: "Φ"; }
+mjx-c.mjx-c1D719.TEX-I::before { padding: 0.694em 0.596em 0.205em 0px; content: "ϕ"; }
+mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c1D459.TEX-I::before { padding: 0.694em 0.298em 0.011em 0px; content: "l"; }
+mjx-c.mjx-c1D45C.TEX-I::before { padding: 0.441em 0.485em 0.011em 0px; content: "o"; }
+mjx-c.mjx-c1D454.TEX-I::before { padding: 0.442em 0.477em 0.205em 0px; content: "g"; }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c1D441.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "N"; }
+mjx-c.mjx-c2F::before { padding: 0.75em 0.5em 0.25em 0px; content: "/"; }
+mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
+mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="CS面试题(知识蒸馏)"><p dir="auto">CS面试题(知识蒸馏)</p></h1><div class="admonition-parent admonition-todo-parent"><div class="callout admonition admonition-todo admonition-plugin " style="--callout-color: 0, 184, 212;" data-callout="todo" data-callout-fold="" data-callout-metadata=""><div class="callout-title admonition-title "><div class="callout-icon admonition-title-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></div><div class="callout-title-inner admonition-title-content">Todo</div></div><div class="callout-content admonition-content"><p dir="auto">成为合格程序员的漫漫长路。</p></div></div></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/#_1" rel="noopener" class="external-link" href="https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/#_1" target="_blank">一个仅供参考的CS学习规划 - CS自学指南</a><br>
+<a data-tooltip-position="top" aria-label="https://www.xiaolincoding.com/" rel="noopener" class="external-link" href="https://www.xiaolincoding.com/" target="_blank">小林coding</a><br>
+<a data-tooltip-position="top" aria-label="https://javaguide.cn/" rel="noopener" class="external-link" href="https://javaguide.cn/" target="_blank">Java 面试指南 | JavaGuide</a><br>
+<a data-tooltip-position="top" aria-label="https://www.supremepole.com/" rel="noopener" class="external-link" href="https://www.supremepole.com/" target="_blank">尼尔的编程专栏</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://github.com/amusi/Deep-Learning-Interview-Book/tree/master/docs" rel="noopener" class="external-link" href="https://github.com/amusi/Deep-Learning-Interview-Book/tree/master/docs" target="_blank">Deep-Learning-Interview-Book/docs at master · amusi/Deep-Learning-Interview-Book · GitHub</a><br>
+<a data-tooltip-position="top" aria-label="https://missing-semester-cn.github.io/" rel="noopener" class="external-link" href="https://missing-semester-cn.github.io/" target="_blank">计算机教育中缺失的一课 · the missing semester of your cs education</a></p></div><div class="admonition-parent admonition-warning-parent"><div class="callout admonition admonition-warning admonition-plugin " style="--callout-color: 255, 145, 0;" data-callout="warning" data-callout-fold="" data-callout-metadata=""><div class="callout-title admonition-title "><div class="callout-icon admonition-title-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg></div><div class="callout-title-inner admonition-title-content">Warning</div></div></div></div><div class="heading-wrapper"><h2 data-heading="自我介绍" dir="auto" class="heading" id="自我介绍"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>自我介绍</h2><div class="heading-children"></div></div><div class="heading-wrapper"><h2 data-heading="CS基础" dir="auto" class="heading" id="CS基础"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>CS基础</h2><div class="heading-children"><div class="heading-wrapper"><h3 data-heading="操作系统" dir="auto" class="heading" id="操作系统"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>操作系统</h3><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/616972168" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/616972168" target="_blank">笔试面试问题总结-计算机组成原理 - 知乎</a></p></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 计算机组成原理</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 什么是哈佛构型？ 什么是冯诺依曼构型(普林斯顿构型)？</span></li>
+<li data-line="2" dir="auto">哈佛构型是一种将存储器分为程序存储器和数据存储器两部分的计算机架构。这两部分存储器有各自独立的地址空间，因此可以同时进行读取程序和读取/写入数据的操作，提高了计算机的运行效率。这种构型常见于微控制器和信号处理器。(RAM和 ROM 分开)</li>
+<li data-line="3" dir="auto">冯诺依曼构型（普林斯顿构型）则是将程序和数据存储在同一个存储器中，共享同一个地址空间。这种构型的优点是可以动态改变程序和数据的存储空间分配，但因为程序和数据共享同一条通道和读取，所以在执行过程中可能会出现“冯·诺依曼瓶颈”，即CPU处理速度远高于内存读写速度，使得CPU在等待内存读写的过程中产生了大量的空闲时间，降低了整体的运算效率。此外，由于程序和数据存储在同一存储器中，存在程序被篡改或数据被误操作的风险。</li>
+<li data-line="4" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 计算机系统的抽象层级</span></li>
+<li data-line="5" dir="auto">1)第1级。微程序机器级。微指令由硬件直接执行。  </li>
+<li data-line="6" dir="auto">2)第2级。传统机器级(机器语言)。用微程序解释指令系统。  </li>
+<li data-line="7" dir="auto">3)第3级。操作系统级。用机器语言解释作业控制语句；  </li>
+<li data-line="8" dir="auto">4)第4级。汇编语言机器级。用汇编程序翻译成汇编语言程序；  </li>
+<li data-line="9" dir="auto">5)第5级。高级语言机器级。用编译程序翻译成汇编程序或直接翻译成机器语言。</li>
+<li data-line="10" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 计算机有哪些性能指标</span></li>
+<li data-line="11" dir="auto">吞吐量： 单位时间处理数据的量的多少。主要取决于存储设备的带宽。</li>
+<li data-line="12" dir="auto">主频： 越高单位时间内能够执行的流水操作越多。10GHz全人类感谢你</li>
+<li data-line="13" dir="auto">CPI、MIPS、FLOPS  </li>
+<li data-line="14" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 计算机有哪些东西组成</span></li>
+<li data-line="15" dir="auto">计算硬件运算器(ALU)，控制器，存储器，输入设备，输出设备 五个部分。</li>
+<li data-line="16" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 计算机按下一个按键到屏幕上出现一个字符中间发生了什么</span></li>
+<li data-line="17" dir="auto">我们以Linux系统为例，首先按下按钮会触发CPU的硬件中断指令告知CPU有一个高优先级的事件发生了；CPU发现这个终端指令来自键盘，就会调用内核中键盘驱动读取来自键盘的扫描码将其转换为一个键盘事件；键盘事件会通过一个叫TTY的服务转换为字符并添加到输入队列；正在运行的应用程序(e.g.Shell)会从输入队列中读取处理这些字符最终在绘图库(比如Windows上的MFC/DirectX；Linux上的GDK/QT)帮助下显示在屏幕上。</li>
+<li data-line="18" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 什么是 CPU 流水？流水线越多越好么？</span></li>
+</ul></div><div><p dir="auto"> CPU流水线是一种实现指令流水线并行的技术，也是现代微处理器用来提高指令处理速度的重要方法。它的工作原理是将CPU执行指令的过程划分为若干个阶段，每个阶段专门负责执行特定的功能，并在各个阶段之间插入流水寄存器。这样，每个指令在执行的过程中，其各个阶段可以同时并行处理，从而大大提高了CPU的工作效率。</p></div><div><p dir="auto">至于流水线的数量，不能简单的认为越多越好。流水线的深度（即阶段的数量）增加可以提高CPU的时钟频率，从而提高性能。但是，增加流水线的深度也会带来一些问题，如流水线冒险（包括结构冒险、数据冒险和控制冒险）和流水线效率降低等问题。此外，增加流水线的深度还会增加设计的复杂性和功耗。因此，流水线的深度需要根据具体的应用需求和芯片设计条件进行合理的选择和设计。</p></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> CPU的指令执行是怎么调度的？什么是多发射？什么是分支预测？详细解释</p>
+</span></li>
+<li data-line="1" dir="auto">
+<p>CPU指令是CPU执行的最小单位, 常见的指令有加减乘除位移跳转等。CPU的指令调度是由scheduler控制的，目标是使得CPU在执行逻辑正确的情况下保持忙碌。完整的指令流水包含fetch(指令获得, 更新程序计数器)-decode(指令解码, 解码成原子操作)-reorder(指令重排序，在乱序执行中需要常涉及重排序缓冲区)-指令调度(dispatch，决定哪些原子操作可以被发射到执行单元)-指令执行(execute，访问寄存器内存进行算术运算)-complete(取保计算结果正确，否则回撤分支预测)-retirement（清除缓冲区和其他指令痕迹）这七个步骤。有很多不同的技术比如，乱序执行，分支预测，多发射执行等技术来提升现代CPU的性能。</p>
+</li>
+<li data-line="2" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> CPU为什么要时钟周期？</p>
+</span></li>
+<li data-line="3" dir="auto">
+<p>CPU通过时钟周期来同步的操作。时钟周期是计算机执行指令的基本时间单位，一个时间周期内计算机可以执行一个基本的操作。如读取内存、执行算术操作等。此外，时钟周期还可以用来同步CPU与其他硬件设备的交互。例如，当CPU需要从硬盘读取数据时，它会在一个特定的时钟周期发送读取请求，然后在另一个时钟周期接收数据。</p>
+</li>
+<li data-line="4" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 总线是什么？有什么特点？有哪些控制方式。</p>
+</span></li>
+<li data-line="5" dir="auto">
+<p>总线是一种计算机当中各个组件互相传递信息的物理路径。它可以分为三种类型。数据总线(CPU和内存之间传递实际数据)；地址总线（CPU和内存之间传递数据应该往哪个内存地址传递）；控制总线(CPU和其他设备之间传输信号的总线)；此外，总线也可以根据其在系统中的位置和作用进行分类，例如系统总线（连接CPU和内存）、前端总线（连接CPU和北桥芯片）、扩展总线（如PCI总线，连接各种外设和南桥芯片）等。</p>
+</li>
+<li data-line="6" dir="auto">
+<p>总线的特点是共享和分时。有同步通信和异步通信两种控制方式。前者受到 CPU 时钟的统一控制；后者则采用应答式通信，实现不互锁、半互锁、全互锁。</p>
+</li>
+<li data-line="7" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是多级存储系统？</p>
+</span></li>
+<li data-line="8" dir="auto">
+<p>多次存储系统主要是用于平衡存储器容量-速度-成本的方案。比如 Cache - 主存” 用于解决 CPU 和主存速度不匹配的问题； 主存 - 辅存”层次：解决存储系统的容量问题</p>
+</li>
+<li data-line="9" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 DMA？</p>
+</span></li>
+<li data-line="10" dir="auto">
+<p>DMA 直接内存访问是一种硬件无需 CPU 参与就可以直接读写内存的技术。主要用于需要高速数据传输的设备比如显卡雷电 借口等。优先级通常来说比 CPU 中断的 I/O 操作要高。</p>
+</li>
+<li data-line="14" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 操作系统 <a data-tooltip-position="top" aria-label="https://jyywiki.cn/OS/2024/" rel="noopener" class="external-link" href="https://jyywiki.cn/OS/2024/" target="_blank">操作系统：设计与实现 (2024 春季学期)</a> <a data-tooltip-position="top" aria-label="https://leetcode.cn/leetbook/detail/awesome-os-guide/" rel="noopener" class="external-link" href="https://leetcode.cn/leetbook/detail/awesome-os-guide/" target="_blank">力扣 - 硬核操作系统指南</a> <a data-tooltip-position="top" aria-label="https://javaguide.cn/cs-basics/operating-system/operating-system-basic-questions-01.html#%E4%BB%80%E4%B9%88%E6%98%AF%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" rel="noopener" class="external-link" href="https://javaguide.cn/cs-basics/operating-system/operating-system-basic-questions-01.html#%E4%BB%80%E4%B9%88%E6%98%AF%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" target="_blank">操作系统常见面试题总结(上) | JavaGuide</a> <a data-tooltip-position="top" aria-label="https://www.xiaolincoding.com/os/#%E5%B0%8F%E7%99%BD%E9%80%82%E5%90%88%E7%9C%8B%E5%90%97" rel="noopener" class="external-link" href="https://www.xiaolincoding.com/os/#%E5%B0%8F%E7%99%BD%E9%80%82%E5%90%88%E7%9C%8B%E5%90%97" target="_blank">图解系统介绍 | 小林coding</a></p>
+</span></li>
+<li data-line="15" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 操作系统有哪些功能？</p>
+</span></li>
+<li data-line="16" dir="auto">
+<p>操作系统主要有六大功能。1. </p>
+</li>
+<li data-line="17" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 堆内存和栈内存是什么？有什么区别？内存地址是如何分配的？</p>
+</span></li>
+<li data-line="18" dir="auto">
+<p>计算机中的内存由操作系统进行管理。它负责控制和协调计算机的物理和虚拟内存。内存管理的主要任务包括跟踪每一块内存何时以及如何被使用，决定哪些进程（程序）可以使用内存以及何时使用，以及在需要时分配和回收内存。在一些编程语言中，我们对内存的抽象可以分为堆内存和栈内存。栈内存通常用于存储局部变量和函数调用的中间变量并以栈帧为单元进行自动管理(分配和释放)，栈内存的特点是快管理简单和容量小容易stack overflow；堆内存则常用于存储程序运行时动态分配的内存可以动态分配大小，程序员一般管理就是堆内存，所以也容易出现内存泄漏等问题。</p>
+</li>
+<li data-line="19" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是内存泄露有什么方法可以缓解或者解决内存泄露</p>
+</span></li>
+<li data-line="20" dir="auto">
+<p>内存泄露是指程序在申请内存之后，没有释放已申请的内存，成为野内存减少系统的可用空间，常常出现在 C/C++中。</p>
+</li>
+<li data-line="21" dir="auto">
+<p>解决方法可以是使用内存安全的语言重写一遍程序；使用内存泄露检测工具比如Valgrind；使用内存池技术，进行自行管理。或者及时释放内存，比如服务器重启。</p>
+</li>
+<li data-line="22" dir="auto">
+<p>解决或缓解内存泄露的方法主要有以下几种：</p>
+</li>
+<li data-line="23" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 许多黑客攻击都是利用软件中实现的缓冲区溢出的漏洞, 对此最可靠的解决方案是什么</p>
+</span></li>
+<li data-line="24" dir="auto">
+<p>当软件向缓冲区写入的数据超过了原有分配给这个程序的缓冲区大小时，就会导致相邻的存储地址被覆盖(指针乱指)；黑客可以利用这种特性恶意修改存储地址的内容执行恶意代码。常见的解决方案有内存地址化；虚拟化；使用安全语言(PythonC#RustGo)；给操作系统打补丁；关键地址保护</p>
+</li>
+<li data-line="25" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 内核是什么？ 内核模式和用户模式有什么区别？</p>
+</span></li>
+<li data-line="26" dir="auto">
+<p>kernel 是操作系统的绝对中心的一段程序，对操作系统拥有完全的控制权。kernel负责启动、内存管理、多任务调度、虚拟化、硬件访问等低级操作和管理；在内核模式在，CPU可以不受限制的访问计算机的所有硬件资源提供最低级别和最高可信度的操作；在用户模式下，代码无法直接访问内存而是使用一种托管的方式访问。两者地址分离，这样在用户模式下崩溃通常是孤立的可以被恢复。</p>
+</li>
+<li data-line="27" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是程序计数器(PC)？</p>
+</span></li>
+<li data-line="28" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 进程和线程有什么区别</p>
+</span></li>
+<li data-line="29" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是并行化？</p>
+</span></li>
+<li data-line="30" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 介绍一下浮点数的类型和 IEEE 754？ 什么是原码，反码和补码？</p>
+</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="计算机网络" dir="auto" class="heading" id="计算机网络"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>计算机网络</h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 计算机网络 <a data-tooltip-position="top" aria-label="https://developer.mozilla.org/zh-CN/docs/Web" rel="noopener" class="external-link" href="https://developer.mozilla.org/zh-CN/docs/Web" target="_blank">Web 开发技术 | MDN</a> <a data-tooltip-position="top" aria-label="https://www.cloudflare.com/zh-cn/learning/" rel="noopener" class="external-link" href="https://www.cloudflare.com/zh-cn/learning/" target="_blank">学习中心主页 | Cloudflare</a> <a data-tooltip-position="top" aria-label="https://javaguide.cn/cs-basics/network/other-network-questions.html#%E5%B8%B8%E8%A7%81%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE" rel="noopener" class="external-link" href="https://javaguide.cn/cs-basics/network/other-network-questions.html#%E5%B8%B8%E8%A7%81%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE" target="_blank">计算机网络常见面试题总结(上) | JavaGuide</a> <a data-tooltip-position="top" aria-label="https://www.xiaolincoding.com/network/#%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E7%BE%A4%E4%BD%93" rel="noopener" class="external-link" href="https://www.xiaolincoding.com/network/#%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E7%BE%A4%E4%BD%93" target="_blank">图解网络介绍 | 小林coding</a>  <a data-tooltip-position="top" aria-label="https://www.supremepole.com/cs/interview/ios/computer/computer-network.html#%E5%9F%BA%E7%A1%80" rel="noopener" class="external-link" href="https://www.supremepole.com/cs/interview/ios/computer/computer-network.html#%E5%9F%BA%E7%A1%80" target="_blank">计算机网路面试题 | 尼尔的编程专栏</a></p>
+</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 键入网址到网页显示，期间发生了什么？<a data-tooltip-position="top" aria-label="https://web.dev/articles/howbrowserswork?hl=zh-cn" rel="noopener" class="external-link" href="https://web.dev/articles/howbrowserswork?hl=zh-cn" target="_blank">浏览器的工作方式 &nbsp;|&nbsp; Articles &nbsp;|&nbsp; web.dev</a></p>
+</span></li>
+<li data-line="2" dir="auto">
+<p>我们暂时忽略键盘-CPU-显示器的过程，就单纯从计算机网络的角度来看。1. 客户端在浏览器地址栏键入“example.com” 向递归 DNS 服务器提交解析请求。2. DNS 服务器再向顶级域(TDL) 后对解析的example.com的目标服务器 IP 进行响应。3.DNS服务器放回目标服务器 IP 给客户端。4.客户端在收到 IP 地址之后向 HTTP请求，这个请求包含用户想要获取的信息 5. 服务器对收到的 HTTP 请求进行处理后返回资源给客户端(HTML,JS) 6. 最后由浏览器内核对资源进行渲染输出成网页(HTML/CSS-&gt;DOM Tree-&gt;Drawing)</p>
+</li>
+<li data-line="3" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是7 层 OSI 网络模型？</p>
+</span></li>
+<li data-line="4" dir="auto">
+<p>OSI 网络模型是帮助人类理解计算机网络运行的一种抽象。按照对网络的抽象程度从低到高分为七层。第一层是物理层代表比特流在物理截止上的传输(比如铜线光纤)；第二层是数据链路层，负责决定从一个节点到另一个节点的传输路径和管理，字节流包装成帧(内包含同步控制地址等信息)，所以 MAC地址以太网协议 Ethernet点对点协议 PPP和网桥和交换机在这层工作；第三层是网络层负责处理数据包和路由转发网络层常见的协议有IP,ARP协议和路由器；第四层是传输层负责段到段通信服务，TCP 和 UDP 在这层发生；第五层是会话层负责建立管理终止会话，这一层包含的协议包括网络文件系统（NFS)；第六层是表示层负责对数据进行转换加密和解密压缩，ASCII,JPEG, MPEG， MIDI等是在这里实现的；最后一层是应用层提供直接可供应用使用的数据，常见的协议有 HTTP, FTP, SMTP等</p>
+</li>
+<li data-line="5" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 MTU？</p>
+</span></li>
+<li data-line="6" dir="auto">
+<p>最大传输单元(MTU) 是以太网定义的一个传输单元，默认大小为 1538 个字节。一个以太网帧包含，以太网首部IP 首部 TCP 首部应用数据和以太网尾部。如果一个数据包超过了 MTU就会被分片处理。</p>
+</li>
+<li data-line="7" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> TCP 和 UDP 有什么区别? 为什么TCP 为什么是可靠传输协议，而 UDP 不是？</p>
+</span></li>
+<li data-line="8" dir="auto">
+<p>TCP（传输控制协议）和 UDP（用户数据报协议）都是在网络层用于数据传输的协议。但是 TCP是一种面相连接的协议，需要通过三次握手和四次挥手进行连接的建立和断开会相对慢；而 UDP 是无链接的协议，速度相对快。我们根据不同网络使用常见选用两者，比如 HTTP 需要保证内容的完整对速度不敏感所以使用 TCP。视频聊天在线游戏等对速度敏感且允许一定程度的丢包，所以使用 UDP. 首先客户端</p>
+</li>
+<li data-line="9" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 简单介绍一下 TCP 的 3 次握手和 4 次挥手</p>
+</span></li>
+<li data-line="10" dir="auto">
+<p>三次握手和四次挥手都是为了在不可靠的信道上建立可靠的链接，这种链接是全双工的。 </p>
+</li>
+<li data-line="11" dir="auto">
+<p>TCP/IP 协议通过三次握手建立连接. 客户端先向服务端发送 ACK 请求发起链接，服务器在收到之后向客户端发送 SYN/ACK 数据包确认客户端的链接请求，最后客户端再一次返回 ACK 数据二次确认客户端的 SYN/ACK。如果不是三次而是两次的握手的话，可能会导致被阻塞的 ACK 包在客户端重发之后延迟到达服务端，导致服务器错误的以为有多次请求。(如果是 HTTPS 还要多一次 TLS 握手)</p>
+</li>
+<li data-line="12" dir="auto">
+<p>TCP/IP 协议通过四次终止链接。首先客户端发送一个 FIN 标志的数据包给服务端请求终止链接。服务端收到之后发送一个 ACK 数据包给客户端已确认客户端的终止请求。服务端在 WAIT 之后也会发送一个 FIN包并在收到来自客户端的确认之后立刻关闭链接。客户端此时在发送第二次 ACK 包之后会进入超时等待状态，最后关闭链接。客户端的超时等待机制是为了确认服务端最后收到了 ACK 包，等待服务端是否会重发 FIN 包。</p>
+</li>
+<li data-line="13" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> URL 和 URI 的区别是什么？</p>
+</span></li>
+<li data-line="14" dir="auto">
+<p>URI(Uniform Resource Identifier) 是统一资源标志符，可以唯一标识一个资源。URL统一资源定位器，是 URI的子集和实例。URL可以提供该资源的具体路径和获取的方法。</p>
+</li>
+<li data-line="15" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 MAC 地址</p>
+</span></li>
+<li data-line="16" dir="auto">
+<p>Media Access Control Address 是一种用于唯一表示网络借口的地址。MAC地址的长度是 6 字节合计 12位 16 进制字符。位于数据链路层。</p>
+</li>
+<li data-line="17" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是端口？有哪些常见的端口</p>
+</span></li>
+<li data-line="18" dir="auto">
+<p>端口是操作系统用于管理不同进程网络访问的逻辑接口。常见的端口有80/443, HTTP/S; 22, SSH; 3389, RDP; 20/21, FTP</p>
+</li>
+<li data-line="19" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 DDoS攻击？有什么类型？如何防范？</p>
+</span></li>
+<li data-line="20" dir="auto">
+<p>DDoS是攻击者通过恶意的超量的请求消耗目标服务器的资源，淹没用户的正常请求，由于攻击者通常控制了很多分布式的感染节点(肉鸡)请求来自世界各地所以很难防御。DDoS的攻击方式可以分为缓冲区溢出攻击和洪水攻击。前者通过内存的缓冲区溢出尽可能的消耗服务器的内存硬盘CPU时间等资源；后者使用大流量的数据包发送使得服务器容量过饱和。</p>
+</li>
+<li data-line="21" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 ARP 协议？什么是 ARP 攻击？</p>
+</span></li>
+<li data-line="22" dir="auto">
+<p>ARP 是一种用于将网络层中的 IP 协议解析为 MAC 地址的协议。发送设备会在网段内进行一次包含目标 IP 的广播，在正常情况下应该只有目标 IP 才会进行相应，这种广播是无协议意味着每次数据转发都会进行一次广播，当然转发设备也会有lookingup table进行缓存。ARP 攻击通过虚假的响应广播劫持数据包。一般可以通过上下游设备的多级lookingup table的多次验证防范这种攻击。</p>
+</li>
+<li data-line="23" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 解释一下什么是子网掩码？有什么作用？</p>
+</span></li>
+<li data-line="24" dir="auto">
+<p>子网掩码是一种用来标识网络地址的哪部分是网络地址，哪部分是主机地址的方式，必须结合 IP 地址同时使用。它是一个32位的数字，和IP地址一样，也分为4个8位的段，每一段用点分隔。在子网掩码中，网络地址部分的所有位都是1，主机地址部分的所有位都是0。</p>
+</li>
+<li data-line="25" dir="auto">
+<p>子网掩码的主要作用是划分网络地址和主机地址，帮助路由器确定数据包的目的地址。当一个数据包到达路由器时，路由器会将数据包的目标IP地址与子网掩码进行逻辑AND运算，得出的结果就是数据包的网络目的地址。然后，路由器就可以根据这个网络地址，将数据包转发到正确的子网中。</p>
+</li>
+<li data-line="26" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 详细说明交换网络中说明情况回出现环路, 产生的后果是什么? 如何解决该问题</p>
+</span></li>
+<li data-line="27" dir="auto">
+<p>一般情况下出现环路的原因是交换机自交，形成一个环路。环路会导致广播数据在环路中无限转发和复制消耗大量网络设备资源；同时强制刷新 MAC 地址表影响网络的正常工作。这种错误在十多年前的交换机经常出现，但是 STP 的引入会建立网络设备的无环拓扑结构，在发送环路时自动启用备用路径保证网络的可用性。</p>
+</li>
+<li data-line="28" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么网络中要以比特流的形式进行传输</p>
+</span></li>
+<li data-line="29" dir="auto">
+<p>首先不同类型的数据最终都可以用比特流的方式进行传输。方便网络设备专注于传输本身（方便压缩加密和纠错）</p>
+</li>
+<li data-line="30" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 Socket？</p>
+</span></li>
+<li data-line="31" dir="auto">
+<p>Socket 是一种虚拟和逻辑的网络节点之间传输协议的方式，用于实现应用层面不同主机之间的数据交换。</p>
+</li>
+<li data-line="32" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 介绍一下什么是 HTTP 协议？  HTTP 各种 Error code 代表什么意思？HTTP 请求有哪些类型？</p>
+</span></li>
+<li data-line="33" dir="auto">
+<p>HTTP 全文为超文本传输协议，有 HTTP1.0/HTTP1.1/HTTP2.0/HTTP3.0四代。其中 2.0 添加了 TLS 的支持。3.0 进一步减少了性能开销和安全性，并启用 TCP 该用 UDP 进行链接。</p>
+</li>
+<li data-line="34" dir="auto">
+<p>200 OK, 403 Forbidden, 404 Not Found, 405 Method Not Allow, 500 Internal Server Error, 501 Not Implemented, 502 Bad Gateway, 503 Service Unavailable <a data-tooltip-position="top" aria-label="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" rel="noopener" class="external-link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" target="_blank">HTTP 响应状态码 - HTTP | MDN</a></p>
+</li>
+<li data-line="35" dir="auto">
+<p><a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/28586791" rel="noopener" class="external-link" href="https://www.zhihu.com/question/28586791" target="_blank">GET 和 POST 到底有什么区别？ - 知乎</a> <a data-tooltip-position="top" aria-label="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods" rel="noopener" class="external-link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods" target="_blank">HTTP 请求方法 - HTTP | MDN</a></p>
+</li>
+<li data-line="36" dir="auto">
+<p>GET 是请求读取服务器上的资源；POST 是将提交报表到服务器。前者幂等，后者不幂等。不幂等也就意味着不能随意多次执行。</p>
+</li>
+<li data-line="37" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 SSL/TLS 协议？ HTTPS 协议是如何保护我们上网的安全的</p>
+</span></li>
+<li data-line="38" dir="auto">
+<p>TLS源于SSL(旨在修复早期网络协议漏洞)，出于某些原因业界混用这两个词。TLS 用于保护如 TCP 这样可靠的传输协议中端对端的加密。运行在 TCP 上的 HTTPS 就使用 TLS 的数据加密，信用证书白名单，检查数据完整性这三点保证我们上网的安全。</p>
+</li>
+<li data-line="39" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 有 HTTP 为什么还要RPC 和WebSocket</p>
+</span></li>
+<li data-line="40" dir="auto">
+<p>HTTP 是一种无状态的请求/响应协议，在需要频繁交互的应用中会导致大量的资源和时间浪费。 WebSocket最早在 2008 年创立，是一种全双工双向通信的传输协议，常用于视频弹幕在线游戏上，使用心跳机制保证链接的稳定性和活跃性。RPC是一种用于分布式系统的协议，可以让程序调用另一台计算机的资源就像调用本地资源一样，它常用于持久连接。</p>
+</li>
+<li data-line="41" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 NAT？它们有哪些类型</p>
+</span></li>
+<li data-line="42" dir="auto">
+<p>NAT 网络地址转换协议，是一种进行公网和局域网IP 转换的技术，位于 OSI 模型的第三层网络层。按照对 IP 和端口的限制程度分为四种。NAT 1(Full Cone NAT) 对收发两段的IP 和端口没有限制；NAT 2(Adress Restricted Cone NAT) IP 受限端口不受限；NAT 3(Port Restricted Cone NAT) IP 和 端口都受限；NAT 4 (Symmetric Cone NAT)除了端口和 IP 都受限之外，还要求内部地址的每次请求都绑定到一个不同的端口上。</p>
+</li>
+<li data-line="43" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 交换机和路由器有什么区别？</p>
+</span></li>
+<li data-line="44" dir="auto">
+<p>交换机通过 MAC 地址转发和管理数据包工作在同一个网段中，位于 OSI 模型的数据链路层。路由器通过 IP 地址转发和管理数据包负责链接不同的网段，位于 OSI 模型的网络层。</p>
+</li>
+<li data-line="45" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是跨域请求CORS？什么是跨站点请求伪造 (CSRF)？<a data-tooltip-position="top" aria-label="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS" rel="noopener" class="external-link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS" target="_blank">跨源资源共享（CORS） - HTTP | MDN</a></p>
+</span></li>
+<li data-line="46" dir="auto">
+<p>跨域资源共享（CORS）是一个请求是在域A 的 HTML 请求，关联域B 的其他资源请求。比如对 example.com的 HTML 请求，要求一个在 example.foo 的 图像请求。跨站请求伪造（CSRF），攻击者通过设置好的陷阱，强迫对已完成身份验证的用户进行非预期的个人或者财产安全操作，是一种对网站的恶意利用。与跨站脚本攻击（XSS）相比，CSRF 目标不是获取用户的信息，而是欺骗用户浏览器，让其以用户的名义运行非用户本人意愿的操作。</p>
+</li>
+<li data-line="47" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 网站有那些保持用户状态的方法？Cookie和 Session的区别是什么？</p>
+</span></li>
+<li data-line="48" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<ol>
+<li data-line="48" dir="auto">URL后面直接添加用户状态(id, passwd)。 这样明文传输非常危险。同样的方法还有将用户状态放在 HTTP 头中。</li>
+</ol>
+</li>
+<li data-line="49" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<ol start="2">
+<li data-line="49" dir="auto">Cookie则在本地计算机存储一段小段文本保存了用户状态，在用户再次访问之后将cookie发送给服务器。这种方式在非对称加密和设置过期日期的状态下还是比较安全的，且同时支持跨域名访问。(状态存在客户端)</li>
+</ol>
+</li>
+<li data-line="50" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<ol start="3">
+<li data-line="50" dir="auto">Session 是在服务端记录客户状态，并使用在客户端上创建的 Session ID 跟踪用户信息。由于 状态存在服务端所以安全性相对 Cookie较高，但会占用服务器资源且不支持跨域访问（状态存在服务端)</li>
+</ol>
+</li>
+<li data-line="51" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<ol start="4">
+<li data-line="51" dir="auto">隐藏表单域：在表单中加入隐藏域，提交表单时一并发送到服务器。</li>
+</ol>
+</li>
+<li data-line="52" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> Ping 指令的作用是什么</p>
+</span></li>
+<li data-line="53" dir="auto">
+<p>Ping 使用 ICMP 报文确认网络之中主机的连通性和网络延迟</p>
+</li>
+<li data-line="56" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 常用工具 <a data-tooltip-position="top" aria-label="https://missing-semester-cn.github.io/" rel="noopener" class="external-link" href="https://missing-semester-cn.github.io/" target="_blank">计算机教育中缺失的一课 · the missing semester of your cs education</a></p>
+</span></li>
+<li data-line="57" dir="auto" class="lc-list-callout" data-callout="@" style="--lc-callout-color: 0, 184, 212;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">@</span> Git <a data-tooltip-position="top" aria-label="https://missing.csail.mit.edu/2020/version-control/" rel="noopener" class="external-link" href="https://missing.csail.mit.edu/2020/version-control/" target="_blank">Version Control (Git) · Missing Semester</a> <a data-tooltip-position="top" aria-label="https://learngitbranching.js.org/?locale=zh_CN" rel="noopener" class="external-link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank">Learn Git Branching</a> <a data-tooltip-position="top" aria-label="https://chris.beams.io/posts/git-commit/" rel="noopener" class="external-link" href="https://chris.beams.io/posts/git-commit/" target="_blank">How to Write a Git Commit Message</a></p>
+</span></li>
+<li data-line="58" dir="auto">
+<p>git commit </p>
+</li>
+<li data-line="59" dir="auto" class="lc-list-callout" data-callout="@" style="--lc-callout-color: 0, 184, 212;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">@</span> Linux指令</p>
+</span></li>
+<li data-line="60" dir="auto" class="lc-list-callout" data-callout="@" style="--lc-callout-color: 0, 184, 212;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">@</span> Shell <a data-tooltip-position="top" aria-label="https://www.shellscript.sh/" rel="noopener" class="external-link" href="https://www.shellscript.sh/" target="_blank">The Shell Scripting Tutorial - The Shell Scripting Tutorial</a><a data-tooltip-position="top" aria-label="https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md" rel="noopener" class="external-link" href="https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md" target="_blank">the-art-of-command-ine/README-zh.md at master · jlevy/the-art-of-command-line · GitHub</a></p>
+</span></li>
+<li data-line="61" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> Shell 和 终端 有什么区别</p>
+</span></li>
+<li data-line="64" dir="auto" class="lc-list-callout" data-callout="@" style="--lc-callout-color: 0, 184, 212;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">@</span> 虚拟化	 <a data-tooltip-position="top" aria-label="https://github.com/Kirhhoff/mini-docker" rel="noopener" class="external-link" href="https://github.com/Kirhhoff/mini-docker" target="_blank">GitHub - Kirhhoff/mini-docker: illustrate what docker really is in 100 lines of C/C++</a> <a data-tooltip-position="top" aria-label="https://kodekloud.com/courses/docker-for-the-absolute-beginner/" rel="noopener" class="external-link" href="https://kodekloud.com/courses/docker-for-the-absolute-beginner/" target="_blank">Docker Training Course for the Absolute Beginner | KodeKloud</a> <a data-tooltip-position="top" aria-label="https://ytzfhqs.github.io/AAAMLP-CN/%E5%8F%AF%E9%87%8D%E5%A4%8D%E4%BB%A3%E7%A0%81%E5%92%8C%E6%A8%A1%E5%9E%8B%E6%96%B9%E6%B3%95/" rel="noopener" class="external-link" href="https://ytzfhqs.github.io/AAAMLP-CN/%E5%8F%AF%E9%87%8D%E5%A4%8D%E4%BB%A3%E7%A0%81%E5%92%8C%E6%A8%A1%E5%9E%8B%E6%96%B9%E6%B3%95/" target="_blank">可重复代码和模型方法 - AAAMLP 中译版</a></p>
+</span></li>
+<li data-line="65" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 用过 Docker 和 k8s 吗？</p>
+</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="算法和数据结构" dir="auto" class="heading" id="算法和数据结构"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>算法和数据结构</h3><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://github.com/lewiscrow/WorkHardAndFindJob/blob/master/%E5%A4%8D%E4%B9%A0/%E9%9D%A2%E8%AF%95/%E6%89%8B%E6%92%95%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%9D%A2%E8%AF%95%E6%97%B6%E5%87%BA%E7%8E%B0%E8%BF%87%E7%9A%84%E7%AE%97%E6%B3%95%E9%A2%98.md" rel="noopener" class="external-link" href="https://github.com/lewiscrow/WorkHardAndFindJob/blob/master/%E5%A4%8D%E4%B9%A0/%E9%9D%A2%E8%AF%95/%E6%89%8B%E6%92%95%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%9D%A2%E8%AF%95%E6%97%B6%E5%87%BA%E7%8E%B0%E8%BF%87%E7%9A%84%E7%AE%97%E6%B3%95%E9%A2%98.md" target="_blank">WorkHardAndFindJob/复习/面试/手撕字节跳动面试时出现过的算法题.md at master · lewiscrow/WorkHardAndFindJob · GitHub</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://juejin.cn/post/6947842412102287373" rel="noopener" class="external-link" href="https://juejin.cn/post/6947842412102287373" target="_blank">字节跳动最爱考的 64 道算法题（JS版） - 掘金</a><br>
+<a data-tooltip-position="top" aria-label="https://codetop.cc/home" rel="noopener" class="external-link" href="https://codetop.cc/home" target="_blank">CodeTop 面试题目总结</a></p></div><div class="admonition-parent admonition-caution-parent"><div class="callout admonition admonition-caution admonition-plugin " style="--callout-color: 255, 145, 0;" data-callout="caution" data-callout-fold="" data-callout-metadata=""><div class="callout-title admonition-title "><div class="callout-icon admonition-title-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg></div><div class="callout-title-inner admonition-title-content">Caution</div></div><div class="callout-content admonition-content"><p dir="auto">Data Structure + Algorithm = Programming </p>
+<p dir="auto">计算机算法的目标是减熵</p></div></div></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 算法前言</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 动态规划</span></li>
+<li data-line="2" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 排序算法</span></li>
+<li data-line="3" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> leetcode</span></li>
+<li data-line="4" dir="auto" class="lc-list-callout" data-callout="@" style="--lc-callout-color: 0, 184, 212;"><span class="lc-li-wrapper"><span class="lc-list-marker">@</span> 接水滴</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="LeetCode" dir="auto" class="heading" id="LeetCode"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>LeetCode</h3><div class="heading-children"></div></div></div></div><div class="heading-wrapper"><h2 data-heading="软件工程" dir="auto" class="heading" id="软件工程"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>软件工程</h2><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 设计模式</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> </span></li>
+</ul></div></div></div><div class="heading-wrapper"><h2 data-heading="信号处理" dir="auto" class="heading" id="信号处理"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>信号处理</h2><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 通信工程</span></li>
+<li data-line="1" dir="auto">通信工程我认为要回答这三个问题。1. 如何在介质中传输信息。 2.如何在不可靠的信道中可靠的传输信息。 3.如果确保通信的速度和容量</li>
+<li data-line="2" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 问题一 ： 如何在介质中传输信息</span></li>
+<li data-line="3" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 问题二 ： 如何在不可靠的信道中可靠的传输信息
+</span><ul>
+<li data-line="4" dir="auto"></li>
+</ul>
+</li>
+<li data-line="5" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 问题三 ： 如何确保通信的速度和容量</span></li>
+</ul></div><div><p dir="auto">在通信安全中有一个将军传递信息的问题我有点忘记了这是什么？</p></div><div><p dir="auto"> 你可能是在提"拜占庭将军问题"（Byzantine Generals Problem）。这是一个在分布式计算和区块链中非常知名的问题，是关于怎样在存在错误或者恶意的信息传递节点的情况下，保证信息能够正确可靠地传递的问题。</p></div><div><p dir="auto">问题的名称来源于一个假想的军事情景：一些拜占庭将军和他们的军队围困在一个城市周围，他们需要通过信使发送信息来达成共识：进攻或者撤退。由于信使可能会被敌人捕获并修改信息，或者有的将军可能是叛徒，会故意发送错误的信息，那么如何设计一种机制，使得即使在这种情况下，忠诚的将军们也能达成一致的决定，这就是拜占庭将军问题。</p></div><div><p dir="auto">通信工程主要要回答几个问题</p></div><div><p dir="auto"> 通信工程主要要回答以下几个问题：</p></div><div><ol>
+<li data-line="0" dir="auto">
+<p>如何有效地传输信息：这涉及到信息的编码、调制、信道选择等问题。</p>
+</li>
+<li data-line="2" dir="auto">
+<p>如何保证信息的准确性：这涉及到错误检测和修正、信道编码等问题。</p>
+</li>
+<li data-line="4" dir="auto">
+<p>如何提高通信的速度和容量：这涉及到信号处理、多址技术、网络优化���问题。</p>
+</li>
+<li data-line="6" dir="auto">
+<p>如何保证通信的安全性：这涉及到加密、身份验证、安全协议等问题。</p>
+</li>
+<li data-line="8" dir="auto">
+<p>如何提高通信的可靠性：这涉及到网络设计、故障检测和恢复、备份和冗余等问题。</p>
+</li>
+<li data-line="10" dir="auto">
+<p>如何制定和实施通信标准和规则：这涉及到通信协议、网络互联、兼容性和互操作性等问题。</p>
+</li>
+<li data-line="12" dir="auto">
+<p>如何设计和管理通信网络：这涉及到网络架构、路由和交换、网络管理和维护等问题。</p>
+</li>
+</ol></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 频域分析</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 传统滤波器</span></li>
+<li data-line="2" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> 统计滤波器</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h2 data-heading="机器学习" dir="auto" class="heading" id="机器学习"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>机器学习</h2><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 经典算法</p>
+</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> </p>
+</span></li>
+<li data-line="2" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是特征工程？如何做好特征工程？</p>
+</span></li>
+<li data-line="5" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 评估</p>
+</span></li>
+<li data-line="6" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> Recall，Precision的计算？</p>
+</span></li>
+<li data-line="7" dir="auto">
+<p>准确率(accuracy)=(TP+TN)/(TP+FN+FP+TN). 通俗解释： 在所有样本中，预测正确的概率  </p>
+</li>
+<li data-line="8" dir="auto">
+<p>精确率(precision)=TP/(TP+FP). 通俗解释：你认为的正样本中，有多少是真的正确的概率  </p>
+</li>
+<li data-line="9" dir="auto">
+<p>召回率(recall)=TP/(TP+FN). 通俗解释：正样本中有多少是被找了出来</p>
+</li>
+</ul></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://mp.weixin.qq.com/s?__biz=MzIwNDY1NTU5Mg==&amp;mid=2247484217&amp;idx=1&amp;sn=8b145d182b88ec0bda42fc390fb86f6a&amp;chksm=973d9dbea04a14a8f8523e9920c6835cac47eeab8c533eff653bbacfe5fa97ed612a0246df0f&amp;scene=21#wechat_redirect" rel="noopener" class="external-link" href="https://mp.weixin.qq.com/s?__biz=MzIwNDY1NTU5Mg==&amp;mid=2247484217&amp;idx=1&amp;sn=8b145d182b88ec0bda42fc390fb86f6a&amp;chksm=973d9dbea04a14a8f8523e9920c6835cac47eeab8c533eff653bbacfe5fa97ed612a0246df0f&amp;scene=21#wechat_redirect" target="_blank">可能是全网写特征工程最通透的...</a></p></div></div></div><div class="heading-wrapper"><h2 data-heading="深度学习" dir="auto" class="heading" id="深度学习"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>深度学习</h2><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> PyTorch </span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 在调用 <code>model.eval()</code> 时会对那些函数产生影响</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h2 data-heading="大模型" dir="auto" class="heading" id="大模型"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>大模型</h2><div class="heading-children"><div class="admonition-parent admonition-tip-parent"><div class="callout admonition admonition-tip admonition-plugin " style="--callout-color: 0, 191, 165;" data-callout="tip" data-callout-fold="" data-callout-metadata=""><div class="callout-title admonition-title "><div class="callout-icon admonition-title-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="fire" class="svg-inline--fa fa-fire fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"></path></svg></div><div class="callout-title-inner admonition-title-content">Tip</div></div><div class="callout-content admonition-content"><p dir="auto"><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/715031517?utm_psn=1808212568843624449" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/715031517?utm_psn=1808212568843624449" target="_blank"># 我没有大模型经验，可以给个机会吗？</a></p>
+<ul>
+<li dir="auto">一个在 DeepSeek 幻方 面试的人分享一下, 它们喜欢什么样的候选人. </li>
+<li dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>对于幻方这种大公司微调个7B反而可能是减分项. 因为问啥都不知道. 
+<ul>
+<li dir="auto">用的是什么并行配置，DP/PP/TP 如何划分</li>
+<li dir="auto">MFU 是什么意思?</li>
+<li dir="auto">Megatron 启动的命令行参数含义</li>
+</ul>
+</li>
+<li dir="auto">论文, 只能证明你经过了基本的科研训练. 除非是大模型最犟</li>
+<li dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>主要看潜力, 基础和好奇心
+<ul>
+<li dir="auto">基础是比如现代高数、基本机器学习的概念、Llama模型结构、Leetcode easy medium. Transformer 细节. 操作系统基本概念</li>
+<li dir="auto"><strong>好奇心</strong>是主动了解技术的前沿, 随着时间推移有积累. 比如, 在两张 2080Ti 上实现和比较过不同的流水算法的性能；用 Triton 自己实现过一些算子; 能讲出不同的大模型使用的 tokenizer 的差异；在 Python 以外的语言上有不错的开发能力（例如某些开源项目背书）；实现过一个效果拔群的五子棋 AI（最好是 RL 算法）。</li>
+</ul>
+</li>
+</ul></div></div></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://github.com/km1994/LLMs_interview_notes" rel="noopener" class="external-link" href="https://github.com/km1994/LLMs_interview_notes" target="_blank">GitHub - km1994/LLMs_interview_notes: 该仓库主要记录 大模型（LLMs） 算法工程师相关的面试题</a><br>
+<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/651023365" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/651023365" target="_blank">【LLM】大模型面试准备-1（题库整理篇） - 知乎</a><br>
+<a data-tooltip-position="top" aria-label="https://techdiylife.github.io/blog/topic.html?category2=t05" rel="noopener" class="external-link" href="https://techdiylife.github.io/blog/topic.html?category2=t05" target="_blank">专题：Transformers开发常见百个问题</a><br>
+<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/689848694" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/689848694" target="_blank">良心之作！《大模型面试宝典》来了 - 知乎</a><br>
+<a data-tooltip-position="top" aria-label="https://www.zhihu.com/pin/1770381320574984193" rel="noopener" class="external-link" href="https://www.zhihu.com/pin/1770381320574984193" target="_blank">AI技术社区 的想法: LLM大模型知识点整理 - 知乎</a><br>
+<a data-tooltip-position="top" aria-label="https://www.zhihu.com/people/cheng-nan-jiu-shi-73-3?utm_source=io.raindrop.raindropio&amp;utm_medium=social&amp;utm_oi=58982500663296" rel="noopener" class="external-link" href="https://www.zhihu.com/people/cheng-nan-jiu-shi-73-3?utm_source=io.raindrop.raindropio&amp;utm_medium=social&amp;utm_oi=58982500663296" target="_blank">沪漂城哥 - 知乎</a><br>
+<a data-tooltip-position="top" aria-label="https://github.com/chaoswork/llm_illustrated/blob/master/llm_illustrated.pdf" rel="noopener" class="external-link" href="https://github.com/chaoswork/llm_illustrated/blob/master/llm_illustrated.pdf" target="_blank">llm_illustrated/llm_illustrated.pdf at master · chaoswork/llm_illustrated · GitHub</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/641109766" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/641109766" target="_blank"># 大模型LLM知识整理</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/680191503" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/680191503" target="_blank">NLP 算法工程师面试题</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/679884390" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/679884390" target="_blank">腾讯大模型算法实习生面试题</a></p></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper"><span class="lc-list-marker">!</span> NLP 基础</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 为什么要 Word Embedding? 直接让 Encoder 处理输入文本不就可以了？</span></li>
+</ul></div><div><p dir="auto"><span style="background:#fff88f">大模型招聘方向</span></p></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>大模型数据工程师</strong> 
+<ul>
+<li data-line="1" dir="auto">数据清洗、ETL、DataEngine、Pipeline </li>
+<li data-line="2" dir="auto">数据来源、有毒信息清洗、语言的筛选和比例、评测集构建</li>
+</ul>
+</li>
+<li data-line="3" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>大模型平台工程师 Infra</strong> 
+<ul>
+<li data-line="4" dir="auto">分部署训练、大模型集群、工程基建</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>大模型算法工程师</strong>
+<ul>
+<li data-line="6" dir="auto">搜广推、AIGC、Bot、Agent</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>大模型部署工程师</strong>
+<ul>
+<li data-line="8" dir="auto">推理加速、 跨平台</li>
+</ul>
+</li>
+</ul></div><div><p dir="auto"><span style="background:#fff88f">AI相关岗位</span></p></div><div><ul>
+<li data-line="0" dir="auto"><strong>AI 产品经理</strong>(20K~30K) ： 了解 AI 工具的技术体系和边界 </li>
+<li data-line="1" dir="auto"><strong>提示词工程师</strong>(15K~30K)：Zero-shot, Few-shot, CoT </li>
+<li data-line="2" dir="auto"><strong>大模型应用工程师</strong>(30K+)：基于AI 脚手架开发</li>
+<li data-line="3" dir="auto"><strong>大模型训练/测评</strong>(40K+)：全参PEFF数据集构建量化部署</li>
+<li data-line="4" dir="auto"><strong>大模型全栈工程师</strong>(40K+)：了解大模型解决方案开发方案</li>
+<li data-line="5" dir="auto">算法工程师(40K+)</li>
+<li data-line="6" dir="auto">架构工程师(60K+)</li>
+<li data-line="7" dir="auto">大模型专家(100K+)?</li>
+</ul></div><div><p dir="auto"><span style="background:#fff88f">大模型技术栈</span></p></div><div><ul>
+<li data-line="0" dir="auto">了解基于 DeepSpeed, Accelerate, Triton 多卡训练推理量化部署算子优化，拥有多卡多节点训练部署经验。</li>
+<li data-line="1" dir="auto">熟悉 Langchain, LlamaIndex 等大模型开发脚手架。熟悉包含 RAG、清洗数据/自对齐数据合成、SFT/DPO训练等绝大数大模型解决方案</li>
+<li data-line="2" dir="auto">熟悉掌握包含 Transformer、llama、qwen的模型架构原理和 大模型常识</li>
+<li data-line="3" dir="auto">扎实的编程经验Python、Pytorch、Transformers、FastAPI 具备良好的计算机科学常识</li>
+</ul></div><div><p dir="auto"><span style="background:#fff88f">大模型项目/业务</span></p></div><div><ul>
+<li data-line="0" dir="auto">我主导负责了基于 LLM 的公文写作辅助 AI 的产品设计调研，写作生成的内部逻辑，打标数据设计，自对齐数据合成、数据集配比。使用 SFT 和 DPO 训练的方式，扩展了 Qwen2/ChatGLM4 的输出长度和公文知识的对齐，实现了递归式 公文辅助写作。在公司内部取得了良好的反馈。</li>
+</ul></div><div class="heading-wrapper"><h3 data-heading="Transformer" dir="auto" class="heading" id="Transformer"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Transformer</h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> Transformer 及其改进</p>
+</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 介绍 Transformer 和 QKV, self-attention 的公式怎么写？</p>
+</span></li>
+<li data-line="2" dir="auto">
+<div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mtext class="mjx-n"><mjx-c class="mjx-c41"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mtext><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mtext class="mjx-n" space="4"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c78"></mjx-c></mjx-mtext><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.052em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-msqrt><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.082em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-box></mjx-sqrt></mjx-msqrt></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></div>
+</li>
+<li data-line="5" dir="auto">
+<p>狭义的 Transformer 是2017 “Attention is all you need" 中提出的模型架构。广义的 Transformer 是指任何只使用注意力机制的模型。</p>
+</li>
+<li data-line="7" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> Transformer 为什么要使用三个QKV？</p>
+</span></li>
+<li data-line="8" dir="auto">
+<p>首先, 使用 QKV 计算Attention 是 Transformer 的发明. 但是 QK 计算注意力分数, 计算两个矩阵的相似程度不是. </p>
+</li>
+<li data-line="9" dir="auto">
+<p><strong>Query (Q)</strong>: 用来查找相关信息。它代表了当前的输入序列位置所需要的上下文信息。</p>
+</li>
+<li data-line="10" dir="auto">
+<p><strong>Key (K)</strong>: 与Query相匹配，用来确定其他位置的信息与当前输入位置的相关性。</p>
+</li>
+<li data-line="11" dir="auto">
+<p><strong>Value (V)</strong>: 是实际被关注的信息，也就是说，一旦确定了某个Key与Query的匹配程度后，就会提取出对应的Value</p>
+</li>
+<li data-line="12" dir="auto">
+<p>之所以要用 KQV 可能是因为这样模型可以从不同的“视角”捕捉序列中的信息。这种机制允许模型并行关注不同位置的特征. CNN 是 在 一个 X, Y 上进行训练的, Transformer 的有效性来源于对矩阵不同的角度进行计算. Google后面处理一个 MLP-Mixer 也印证了这个观点. </p>
+</li>
+<li data-line="15" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 现在大模型的使用为什么都是 Transformer 架构? </p>
+</span></li>
+<li data-line="16" dir="auto">
+<p>从Transformer 架构本身来看. 首先是没有RNN顺序训练数据的性质, 直接用 Attention 进行大矩阵运算, 非常适合现代 GPU. 然后多头可以更好地捕捉数据中的多样性特征，并提高模型的表现.  使用位置编码天然可以处理可变序列. </p>
+</li>
+<li data-line="17" dir="auto">
+<p>从 Scaling Law 来看. 只要模型从技术上翻遍模型变大, 然后模型本书计算的强度(压缩)程度足够高就行. </p>
+</li>
+<li data-line="21" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 注意力分数为什么要除以 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msqrt><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.082em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-box></mjx-sqrt></mjx-msqrt></mjx-math></mjx-container></span> <a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/339723385/answer/3513306407" rel="noopener" class="external-link" href="https://www.zhihu.com/question/339723385/answer/3513306407" target="_blank">知乎</a> <a data-tooltip-position="top" aria-label="https://spaces.ac.cn/archives/9812" rel="noopener" class="external-link" href="https://spaces.ac.cn/archives/9812" target="_blank">从梯度最大化看Attention的Scale操作 - 科学空间|Scientific Spaces</a></p>
+</span></li>
+<li data-line="22" dir="auto">
+<p>Q K 点积(注意力分数)的方差会随着 维度<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span> 变大而累加，造成元素之间的差异变大，使得 Softmax 更加有可能退化成 Argmax。 而 Argmax 本质上离散的，是不可微的，放在雅克比矩阵里就是只有一个 1 其他全是 0. 同时除以 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span> 也让注意力分数的方差为 1，有助于训练。</p>
+</li>
+<li data-line="29" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么注意力权重要通过 Softmax 输出？为什么不直接使用 Argmax 或者 Sigmoid? </p>
+</span></li>
+<li data-line="30" dir="auto">
+<p><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/705714754" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/705714754" target="_blank">苏神 - 通向概率分布之路：盘点Softmax及其替代品</a></p>
+</li>
+<li data-line="31" dir="auto">
+<p>输出分类概率基本两个选择 Sigmoid 和 Softmax. </p>
+</li>
+<li data-line="32" dir="auto">
+<p>首先 Softmax 输入是一个多元变量，输出的多个类别的输出缩放到一个相对概率分布, 适用于多分类问题。自注意力机制因为要考虑到整个输入序列对于当前 Query 的情况(属于多分类问题)，故使用 Softmax。 相比 Sidmoid， Softmax 的输出更加不均匀适合无监督任务。</p>
+</li>
+<li data-line="37" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么要使用位置编码? 有什么种类的 Position Encoding?</p>
+</span></li>
+<li data-line="38" dir="auto">
+<p>关键在于 Transformer 中自注意力是只用 Non-local 方法， 整个序列在点积中统一的被处理失去前后关系，不像是 CNN 或者 RNN 这类 local 方法天然带位置信息。所以需要一个额外的方法帮助模型感知到序列顺序。</p>
+</li>
+<li data-line="39" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Postion Encoding 基本上可以分为：</p>
+<ul>
+<li data-line="40" dir="auto">可学习的位置编码(Position Embedding)： 直接把 PE 作为一个参数放在模型中，期待可以在大数据中自动学习序列的相对关系. 代表, BERT. </li>
+<li data-line="41" dir="auto">绝对位置编码：对每个序列和 Embedding 位置赋予一个绝对唯一的位置信息。代表, Transformer, GPT中的正弦-余弦位置编码。使用周期函数的交替使用和在特征维度上的频率缩放赋予每个token唯一的位置信息。</li>
+<li data-line="42" dir="auto">相对位置编码：微调注意力机制，代表，旋转位置编码(RoPE)，直接在 Q 上哈达玛积一个 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></li>
+</ul>
+</li>
+<li data-line="43" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么 BERT 要使用 Position Embedding ?</p>
+</span></li>
+<li data-line="44" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么 BERT 的 三个 Embedding 可以直接相加？</p>
+</span></li>
+<li data-line="45" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是旋转位置编码(RoPE)? 为什么现在流行使用 RoPE </p>
+</span></li>
+<li data-line="49" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么要使用多头(MHA)？</p>
+</span></li>
+<li data-line="50" dir="auto">
+<p>多头自注意力机制允许模型共同处理来自不同表示子空间的信息。我的理解是一种多头是一种类似集成学习(ensemble)中的 stacking 方法。单独训练多个基模型后用某种方法合并。多头注意力中合并后要经过一个可学习的线性层就是试图动态调整多个头重要性的权重。同时，注意力机制本身和多头由于是独立计算的，也可以进一步提高模型的并行度，方便多卡集群训练</p>
+</li>
+<li data-line="51" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> MHA 有什么优化？MQA、GQA、MLA 是什么？</p>
+</span></li>
+<li data-line="57" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> <code>Norm</code> 介绍 Layer Normalization, 为什么Transformer 一般使用 LayerNorm<a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/395811291/answer/1251829041" rel="noopener" class="external-link" href="https://www.zhihu.com/question/395811291/answer/1251829041" target="_blank">知乎</a></p>
+</span></li>
+<li data-line="58" dir="auto">
+<p>首先，任何 Normalization 在网络中的应用都是为了缓解内部协方差偏移或者平滑损失函数空间帮助训练。规范化的原则是如果你对那个维度的数据结构感兴趣呢，就别在那个维度进行归一化。</p>
+</li>
+<li data-line="59" dir="auto">
+<p>并行化：同时不需要跨样本计算均值和方差，更加便于 Transformer 并行化。</p>
+</li>
+<li data-line="60" dir="auto"></li>
+</ul></div><div><p dir="auto">变长序列：测试集中出现比训练集更长的数据就意味着多出来的数据没有相应的统计量以供使用，每个批次的统计属性有很大波动，计算出的均值和方差代表性变差，带来过度的噪声，feed网络的数据分布不再稳定，消除 ICS 变得失去意义。不依赖序列长度的 LN 就应允而是</p></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> <code>FeedForward</code> 有什么作用必须存在吗？</p>
+</span></li>
+<li data-line="1" dir="auto">
+<p>FeedFowd 是 MLP 层实际在拟合数据的层。</p>
+</li>
+<li data-line="2" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> MoE 是什么？有什么作用？</p>
+</span></li>
+<li data-line="5" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 GLU？在大模型中使用 GLU 作为激活函数有什么好处？</p>
+</span></li>
+<li data-line="8" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span>  Transformer 的并行化体现在什么地方？</p>
+</span></li>
+<li data-line="11" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> Self Attention 的计算复杂度是怎么样的？</p>
+</span></li>
+<li data-line="15" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么要使用 KV Cache ？为什么没有 Q Cache ?</p>
+</span></li>
+<li data-line="16" dir="auto">
+<p>在主流的自回归大模型使用的 Causal Attention 中，依赖 t-1 时刻的 KV 对 t 时刻的 token 进行预测。所以保存已经计算好的 t-1 时刻的 KV 就可以大幅减少计算量和占用。</p>
+</li>
+<li data-line="17" dir="auto">
+<p>Q 因为了即将生成新单词的信息，每一步回归都是唯一的，不能缓寸。</p>
+</li>
+<li data-line="19" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么降低KV Cache的大小如此重要？</p>
+</span></li>
+<li data-line="20" dir="auto">
+<p>因为 GPU 的显存大小是有限的。它一部分要存放模型的参数和前向计算的激活值，一部分要存放模型的KV Cache。减少KV Cache的目的就是要实现在更少的设备上推理更长的Context，或者在相同的Context长度下让推理的batch size更大，从而实现更快的推理速度或者更大的吞吐总量。最终降低成本。</p>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="大模型幻觉" dir="auto" class="heading" id="大模型幻觉"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>大模型幻觉</h3><div class="heading-children"></div></div><div class="heading-wrapper"><h3 data-heading="优化推理" dir="auto" class="heading" id="优化推理"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>优化推理</h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 有什么改进 KV Cache 的技术</p>
+</span></li>
+<li data-line="1" dir="auto"></li>
+<li data-line="4" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 能不能告诉我 Flash attention的大致原理？</p>
+</span></li>
+<li data-line="5" dir="auto">
+<p>利用GPU SRAM比DRAM(GDDR/HBM)快，融合多个算子，省去softmax前用于反向梯度求导的激活值</p>
+</li>
+<li data-line="8" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 大模型的 Mask 机制有哪几种？各种都有什么样的特点？</p>
+</span></li>
+<li data-line="9" dir="auto">
+<p><strong>Masked Language Modeling (MLM)</strong>：随机 Mask 掉一些 token 然后用其他token 预测 Mask 掉的内容。迫使模型学习使用双向上下文信息，即考虑被masked词前后的词。 代表:BERT</p>
+</li>
+<li data-line="10" dir="auto">
+<p><strong>Causal Language Modeling (CLM)</strong> ：模型仅根据先前的token来预测下一个token，适合生成文本任务。代表:GPT</p>
+</li>
+<li data-line="11" dir="auto">
+<p><strong>Permutation Language Modeling</strong>: 对输入序列的token进行随机排列，然后预测缺失的部分(反正注意力机制是全局的)，从而更加有效的使用双向上下文。代表，XLNet。</p>
+</li>
+<li data-line="12" dir="auto">
+<p><strong>Replaced Token Detection (RTD)</strong>: 不是简单 MASK token, 而是将一些token替换为模型认为可能的其他token，然后预训练模型来判断哪些token是被正确替代的，哪些是被错误替代的。以此让模型更加高效的学习到全部输入，而不仅仅预测 Mask 掉的部分。代表：ELECTRA</p>
+</li>
+<li data-line="13" dir="auto">
+<p><strong>Span-based Masking</strong>： 随机mask连续的token序列（即一个span) 强迫模型学习更长的上下文。代表：SpanBERT</p>
+</li>
+<li data-line="14" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是单向双向注意力机制？</p>
+</span></li>
+<li data-line="15" dir="auto">
+<p>单向双向指的是自注意力机制在时间步上可以访问的信息范围。训练时 Mask 机制的不同导致了模型</p>
+</li>
+<li data-line="16" dir="auto">
+<p>causal masking 机制使得模型在每个时间步只能基于先前的上下文来预测下一个token。</p>
+</li>
+<li data-line="17" dir="auto">
+<p>MLM 则迫使模型学习同时考虑学习前后上下文。</p>
+</li>
+<li data-line="19" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么 GPT 要使用 causal masking? 为什么GPT 现在为什么比 BERT 效果好</p>
+</span></li>
+<li data-line="20" dir="auto">
+<p>这个问题关乎 文本生成 和 文本理解 有什么关系？两者是不是可以互相取代，还是各有所长。</p>
+</li>
+<li data-line="21" dir="auto">
+<p>我个人认为 文本生成是一定要理解上下文的。而文本理解，理解是理解了，但是精力也被分散因为是注意力是双向的。</p>
+</li>
+<li data-line="22" dir="auto">
+<p>GPT 比 BERT 效果更好的原因。我的理解是 BERT 还不够大，没有用 RHLF, SFT 机制辅助训练。还有就是 GPT 的技术官是非常非常坚信 Scaling law, 技术路线走的比较笃定，同时 scaling law 真的有用 for now.</p>
+</li>
+<li data-line="26" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> BERT 和 GPT 的区别除了 Mask 机制外还有什么？</p>
+</span></li>
+<li data-line="27" dir="auto">
+<p>BERT 用的 encoder-only, GPT 是 decoder-only. </p>
+</li>
+<li data-line="32" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span>  Encoder-only，Decoder-only，Encoder-Decoder 划分的具体标注是什么？典型代表模型有哪些？</p>
+</span></li>
+<li data-line="33" dir="auto">
+<p>它们的主要区别在于处理输入和输出文本的方式不同。</p>
+</li>
+<li data-line="34" dir="auto">
+<p>Encoder-only模型被设计来理解输入，代表模型有BERT 和 RoBERTa</p>
+</li>
+<li data-line="35" dir="auto">
+<p>Decoder-only模型被设计来生成文本。代表有 GPT， XLNet</p>
+</li>
+<li data-line="36" dir="auto">
+<p>Encoder-Decoder模型则能够先理解输入，代表模型有 Google T5 和BART</p>
+</li>
+<li data-line="39" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 为什么 GPT 和目前主流LLM 是 decoder-only? <a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/588325646" rel="noopener" class="external-link" href="https://www.zhihu.com/question/588325646" target="_blank">知乎</a></p>
+</span></li>
+<li data-line="40" dir="auto">
+<p>历史的偶然性 + 三个 decoder-only 优越性的解释方法</p>
+</li>
+<li data-line="41" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>历史的偶然</p>
+<ul>
+<li data-line="42" dir="auto">Decoder-only 本身比较好训练，同时还有坚信 Scaling Law 的 OpenAI 推动实现</li>
+<li data-line="43" dir="auto">然后 Decoder-only 由于适合 更加受人关注的生成任务</li>
+<li data-line="44" dir="auto">OpenAI 探索出来这套训练方法和大规模数据的训练 也再一定维度上弥补了 Encoder 缺失导致了理解能力的下降</li>
+</ul>
+</li>
+<li data-line="45" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>三个解释 decoder-only 优越性的方法</p>
+<ul>
+<li data-line="46" dir="auto">Attention 低秩： 苏神说双向attention的注意力矩阵容易退化为低秩状态，而causal attention的注意力矩阵是下三角矩阵，必然是满秩的，建模能力更强。</li>
+<li data-line="47" dir="auto">打破了置换不变性</li>
+<li data-line="48" dir="auto">Decoder-only 方便实现 KV Cache</li>
+</ul>
+</li>
+</ul></div><div><img style="width:500" src="https://cdn.sa.net/2024/07/28/68lQnaCWcvJiu3o.png" referrerpolicy="no-referrer">
+<img style="width:500" src="https://cdn.sa.net/2024/07/28/8xmYiS9kRGWftgZ.png" referrerpolicy="no-referrer"></div><div><img style="width:500" src="https://cdn.sa.net/2024/07/28/qx43b6NhtXlfVpW.png" referrerpolicy="no-referrer"></div><div><ul>
+<li data-line="0" dir="auto">
+<p>原理上decoder-only因为要输出流畅有逻辑的文本本身就会考虑之前的所有时间步；Masked language modeling预训练不适合输出长文本。 苏神说双向attention的注意力矩阵容易退化为低秩状态，而causal attention的注意力矩阵是下三角矩阵，必然是满秩的，建模能力更强。</p>
+</li>
+<li data-line="1" dir="auto">
+<p>工程上简化的训练过程，让模型只专注于预测下一个token，兼顾理解和生成；KV Cache 使用的优势在 Decoder上更加明显，因为每个token的表示只和它之前的输入有关</p>
+</li>
+<li data-line="2" dir="auto">
+<p>实验上发现decoder-only 在下游任务上的zero-shot,few-shot 泛化能力好</p>
+</li>
+<li data-line="3" dir="auto">
+<p>路径上 OpenAI 在以decoder-only架构为基础摸索出了一套行之有效的训练方法和Scaling Law</p>
+</li>
+<li data-line="8" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> RLHF对于大模型微调是必要的吗？为什么？ <a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/651021172/answer/3515756475" rel="noopener" class="external-link" href="https://www.zhihu.com/question/651021172/answer/3515756475" target="_blank">知乎</a></p>
+</span></li>
+<li data-line="9" dir="auto">
+<p>这个关乎 OpenAI 使用两阶段学习背后的动机？</p>
+</li>
+</ul></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/524165474/answer/3369040272" rel="noopener" class="external-link" href="https://www.zhihu.com/question/524165474/answer/3369040272" target="_blank">zhihu.com/question/524165474/answer/3369040272</a></p></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper"><span class="lc-list-marker">?</span> 有几种预训练方法？GPT 是如何做预训练的？</span></li>
+</ul></div><div><ol>
+<li data-line="0" dir="auto">无监督预训练：Mask 下文，用上文预测 Mask 掉的下文。 </li>
+<li data-line="1" dir="auto">SFT 有监督训练：人类介入的预训练</li>
+<li data-line="2" dir="auto">PPO 强化学习：</li>
+</ol></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 多模态</p>
+</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 为什么 Transformer 适合多模态任务</p>
+</span></li>
+<li data-line="2" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 多模态有什么实现方式(双流、单流、浅对齐)</p>
+</span></li>
+<li data-line="5" dir="auto">
+<p>clip是图文对比预训练</p>
+</li>
+</ul></div><div><p dir="auto">blip2用clip做视觉backbone，中间加bert做对齐训练（Qformer）。再用一个MLP/linear接到LLM上，只更新MLP/linear浅层对齐。</p></div><div><p dir="auto">minigpt4：换更好LLM</p></div><div><p dir="auto">llava，clip输出的embedding过linear直接拼接到LLM的输入embedding中，两阶段训练，图文预训练和图文指令训练，均只训练浅对齐linear。可以只用指令数据集，不用预训练，前提指令数据集要够。</p></div><div><p dir="auto">CogVLM:换更大的clip和LLM，LLM增加视觉专家部分（LLM部分copy然后微调）</p></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 强化学习</p>
+</span></li>
+<li data-line="1" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 强化学习是什么？什么是on-policy? 什么是 off-policy?</p>
+</span></li>
+<li data-line="2" dir="auto">
+<p>On-policy = “I  can only learn from my own action”; Off-policy "I can learn from anyone trying to achieve any goal"</p>
+</li>
+<li data-line="3" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 Online? 什么是 Offline?</p>
+</span></li>
+<li data-line="4" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 RLHF？ 为什么有 SFT 还要进行 RLHF?</p>
+</span></li>
+<li data-line="5" dir="auto">
+<p>DPO, PRO </p>
+</li>
+<li data-line="8" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 预训练</p>
+</span></li>
+<li data-line="11" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 微调(数据采集，评估)</p>
+</span></li>
+<li data-line="12" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 告诉我常见的微调方法，以及常见的下游任务</p>
+</span></li>
+<li data-line="13" dir="auto">
+<p>P-tuning </p>
+</li>
+<li data-line="14" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> Lora的原理和存在的问题讲一下？</p>
+</span></li>
+<li data-line="15" dir="auto">
+<p>低秩矩阵分解(Low-rank Adaptation) 的核心思想是通过引入低秩矩阵来适应预训练模型中特定的权重，在既减少参数量增加的同时，又保持或提升模型性能。基本上就是在 Q 和 K 额外添加了一个可学习的训练参数空间，允许模型进行微调。</p>
+</li>
+<li data-line="16" dir="auto">
+<p>数学上使用一个低秩矩阵来近似估计一个矩阵。原理和奇异值(SVD)分解类似,</p>
+</li>
+<li data-line="17" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> Lora 有什么不同的种类？</p>
+</span></li>
+<li data-line="18" dir="auto">
+<p>GaLora</p>
+</li>
+<li data-line="19" dir="auto">
+<p>QLora </p>
+</li>
+<li data-line="24" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 QLoRA ？ 有什么特点</p>
+</span></li>
+<li data-line="27" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 如何在预训练阶段提升模型的性能</p>
+</span></li>
+<li data-line="28" dir="auto">
+<p>清洗高质量数据，丰富多样，去重复，无害化，低噪音，代码结构和数学结构更加合理</p>
+</li>
+<li data-line="31" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 推理加速</p>
+</span></li>
+<li data-line="33" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> deepspeed 是什么？ </p>
+</span></li>
+<li data-line="35" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 模型训练以及推理中的显存占用各种混合精度训练的优劣</p>
+</span></li>
+<li data-line="36" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 量化是什么？常见的量化都有什么方式？</p>
+</span></li>
+<li data-line="37" dir="auto">
+<p>量化 AWQ（激活感知权重量化）[1] GPTQ（GPT量化方法）[2] GGUF（llama.cpp）[3]</p>
+</li>
+</ul></div><div><p dir="auto">4bit、8bit、16bit量化，一般都说W4A16，即参数为4bbit，激活值为16bit。推荐W8A8。临时常用bitsandbytes库,动态量化。</p></div><div><ul>
+<li data-line="0" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 除了loss之外，如何在训练过程中监控模型能力？</p>
+</span></li>
+<li data-line="8" dir="auto" class="lc-list-callout" data-callout="~" style="--lc-callout-color: 124, 77, 255;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">~</span> 蒸馏</p>
+</span></li>
+<li data-line="9" dir="auto">
+<p>BERT-PKD多层蒸馏</p>
+</li>
+<li data-line="10" dir="auto">
+<p>DistillBERT预训练蒸馏</p>
+</li>
+<li data-line="11" dir="auto">
+<p>TinyBERT多步蒸馏</p>
+</li>
+<li data-line="12" dir="auto">
+<p>MobileBERT</p>
+</li>
+<li data-line="13" dir="auto">
+<p>MiniLM蒸馏alve矩阵</p>
+</li>
+<li data-line="19" dir="auto" class="lc-list-callout" data-callout="!" style="--lc-callout-color: 255, 23, 68;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">!</span> 开发框架</p>
+</span></li>
+<li data-line="25" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 大模型是什么<a data-tooltip-position="top" aria-label="https://www.cloudflare.com/zh-cn/learning/ai/what-is-large-language-model/" rel="noopener" class="external-link" href="https://www.cloudflare.com/zh-cn/learning/ai/what-is-large-language-model/" target="_blank">什么是大型语言模型(LLM)？ | Cloudflare</a> 如何选择基座大模型？</p>
+</span></li>
+<li data-line="26" dir="auto">
+<p>大型语言模型是一种在极大量数据集上训练过的神经网络(基本上基于 Transformer)，可以基于概率回答非结构化的自然语言提问。开源的llama3, qwen, command r, mistral. </p>
+</li>
+<li data-line="27" dir="auto">
+<p>我们从性能和应用场景方便探讨基座大模型的选择。关于大模型的性能可以参考这三个指标。1.大模型是否能够反应提问者的真实意图 2.大模型的回答和问题是否有相关性 3. 大模型回答是否反应事实。更加应用场景我们可能还需要关注大模型的中文对齐能力；代码生成能力；任务规划能力等。关于应用场景(是否要求合规?部署设备?)；在这个基础上选择开源或闭源模型；是否有多模态需求；是否有微调Funcation Calling的需求。最后在参考社区流行大模型和各种大模型榜单之后，还需要有有一套评估大模型在自己应用上能力的标准。</p>
+</li>
+<li data-line="28" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 提示词工程？有哪些提示词工程的方法论？</p>
+</span></li>
+<li data-line="29" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 RAG 技术？有什么好处和弊端？ <a data-tooltip-position="top" aria-label="https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0046" rel="noopener" class="external-link" href="https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0046" target="_blank">专题：LangChain + RAG 参考资料</a></p>
+</span></li>
+<li data-line="30" dir="auto">
+<p>想在流行的 RAG 技术是2020 年由 Meta 提出。它允许大模型使用预训练数据之外的信息来帮助回答。RAG 首先要求 Embedding 模型将本地知识库映射成向量之后使用 query 和 向量进行相似度检索后将最相关的top-k chunks 返回给 LLM 帮助高质量回答问题。(Load-Split-Embed-Store)</p>
+</li>
+<li data-line="31" dir="auto">
+<p>RAG 可以允许 LLM 使用外部的信息(数据更安全信息时效性更高)，大幅提高 LLM 的回答质量。但是 RAG 目前也有很大的缺陷，比如 query 本身语义的模糊，embedding 模型的召回率低，大约为70%不能满足实际业务需求；RAG 性能受限于 LLM 本身等。</p>
+</li>
+<li data-line="32" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 有哪些进行相似度检索的方法？比如语义检索的余弦相似度？从语义和图像两方面说明</p>
+</span></li>
+<li data-line="33" dir="auto">
+<p>语义相似度检索：余弦相似度(测量两个向量的余弦角度来); Jaccard 相似度(比较两个集合的交集和并集来确定它们之间的相似性);  Word2Vec、GloVe、BERT等预训练的词嵌入模型</p>
+</li>
+<li data-line="34" dir="auto">
+<p>图像相似度检索：欧几里得距离(计算像素和像素之间的欧式距离)；直方图比较(比较图像的颜色直方图)；使用 CNN  提取的特征比较； SIFT、SURF、ORB等特征点匹配方法</p>
+</li>
+<li data-line="35" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 Embedding？如何选择 RAG 和 Embedding 模型？你用过哪些向量数据库？<a data-tooltip-position="top" aria-label="https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0047" rel="noopener" class="external-link" href="https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0047" target="_blank">专题：LangChain + RAG 参考资料</a></p>
+</span></li>
+<li data-line="36" dir="auto">
+<p>嵌入是对数值文本图像视频音频的一种表示。它可以帮助机器学习模型方便快速低成本的特征空间中搜索相似的对象。这对大模型的语意搜索非常有意义，常见的 RAG 就利用嵌入这个概念对文档内容使用 Embedding + LLM 进行索引.</p>
+</li>
+<li data-line="37" dir="auto">
+<p>RAG 系统有模型的性能、处理速度，vector维度大小。HuggingFace上热门的 Embedding有 BEC(中英双语)，acge-text(中文)，SFR,jina(英文)</p>
+</li>
+<li data-line="38" dir="auto">
+<p>向量数据库是一种方便向量比较的软件基础设施。我用过 ChromDB, Milvus, Pinecone 和 Cloudflare Vectorize</p>
+</li>
+<li data-line="39" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 ReRank 模型? 它和 Embedding 模型有什么区别？为什么要使用rerank模型？为什么rerank模型比单独embedding模型排序结果好呢？如何选择 ReRank 模型？ <a data-tooltip-position="top" aria-label="https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0049" rel="noopener" class="external-link" href="https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0049" target="_blank">专题：LangChain + RAG 参考资料</a></p>
+</span></li>
+<li data-line="40" dir="auto">
+<p>ReRank 是一种 2nd retrieval 模型，作用是对RAG 检索出来的 chunks 进行重排序后再传递给 LLM 生成最终答案。ReRank 模型需要使用原因是RAG 给出的 chunks，排序较高chunks可能遗漏了回答问题的一些信息，排序较低的chunks也可能包含了回答问题的重要信息。一个最简单的方式是返回 LLM 最大量的chunks. 但是 LLM 不但有上下文窗口的限制而且大量的上下文也会影响 LLM 的回忆能力。为了解决这个问题我们就需要将尽可能返回LLM和 query最相关的 chunks.</p>
+</li>
+<li data-line="41" dir="auto">
+<p>Embedding 的输入是文档输出是固定维度的向量(e.g.768维1536 维)不可能避免的造成了信息的丢失，RAG 再使用丢失信息的向量和 query 进行相似度比较效果就会比较差(但是比较快)；ReRank 直接在 Transformer 中比较的 query 和 chunks 之间的相似度，没有双编码器向量转换的过程所以精度更高。</p>
+</li>
+<li data-line="42" dir="auto">
+<p>ReRank 模型 有两个关键指标。Hit-Rate 检索文本正解率(在 Top-k 中正确)；  MRR 检索结果中正确文本所处位置的指标（越靠前分数越高）。现在最流行的 ReRank 模型应该是 BGE。</p>
+</li>
+<li data-line="43" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 提示词工程, RAG, 微调应该如何选择哪个适合自己的业务场景？</p>
+</span></li>
+<li data-line="44" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 Langchain。它可以用来干嘛？</p>
+</span></li>
+<li data-line="45" dir="auto">
+<p>Langchain 是一个用于开发 LLM 应用的开发框架，它可以用于开发比如基于 RAG 的问答系统，基于 SQL 的问答机器人，甚至利用 Function Calling 制作 Agent</p>
+</li>
+<li data-line="46" dir="auto">
+<p>同时 Langchain也是一套生态系统. LangSmith用于生产级别的 LLM 维护更新管理; LangServer 方便快速搭建API 服务; LangGraph 方便管理 Agent 的状态；</p>
+</li>
+<li data-line="47" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 知道 Deepspeed 么？什么是 ZeRO算法？</p>
+</span></li>
+<li data-line="48" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> vLLM 和 llama.cpp 是如何加速推理服务的？</p>
+</span></li>
+<li data-line="49" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是模型微调？什么时候需要模型微调？模型微调有什么方法？你做个什么模型微调么用了什么数据和框架？</p>
+</span></li>
+<li data-line="50" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 什么是 LoRA? 为什么要使用 LoRA? 使用 LoRA 和 不使用微调有什么区别</p>
+</span></li>
+<li data-line="51" dir="auto" class="lc-list-callout" data-callout="?" style="--lc-callout-color: 255, 145, 0;"><span class="lc-li-wrapper">
+<p><span class="lc-list-marker">?</span> 分布式训练有哪些基本类型？<code>pytorch</code> 中有哪些 API？</p>
+</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="Langchain 等中间件" dir="auto" class="heading" id="Langchain_等中间件"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Langchain 等中间件</h3><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/717095320" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/717095320" target="_blank"># LangChain 面试题八股文，简单背一背 - 知乎</a></p></div></div></div></div></div><div class="heading-wrapper"><h2 data-heading="&quot;你还有什么要问的？&quot;" dir="auto" class="heading" id="&quot;你还有什么要问的？&quot;"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>"你还有什么要问的？"</h2><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://github.com/amusi/Deep-Learning-Interview-Book/blob/master/docs/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.md" rel="noopener" class="external-link" href="https://github.com/amusi/Deep-Learning-Interview-Book/blob/master/docs/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C.md" target="_blank">Deep-Learning-Interview-Book/docs/面试经验.md at master · amusi/Deep-Learning-Interview-Book · GitHub</a></p></div><div class="mod-footer"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#CS面试题(知识蒸馏)"><div class="tree-item-contents heading-link" heading-name="CS面试题(知识蒸馏)"><span class="tree-item-title">CS面试题(知识蒸馏)</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#自我介绍"><div class="tree-item-contents heading-link" heading-name="自我介绍"><span class="tree-item-title">自我介绍</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#CS基础"><div class="tree-item-contents heading-link" heading-name="CS基础"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">CS基础</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#操作系统"><div class="tree-item-contents heading-link" heading-name="操作系统"><span class="tree-item-title">操作系统</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#计算机网络"><div class="tree-item-contents heading-link" heading-name="计算机网络"><span class="tree-item-title">计算机网络</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#算法和数据结构"><div class="tree-item-contents heading-link" heading-name="算法和数据结构"><span class="tree-item-title">算法和数据结构</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#LeetCode"><div class="tree-item-contents heading-link" heading-name="LeetCode"><span class="tree-item-title">LeetCode</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#软件工程"><div class="tree-item-contents heading-link" heading-name="软件工程"><span class="tree-item-title">软件工程</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#信号处理"><div class="tree-item-contents heading-link" heading-name="信号处理"><span class="tree-item-title">信号处理</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#机器学习"><div class="tree-item-contents heading-link" heading-name="机器学习"><span class="tree-item-title">机器学习</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#深度学习"><div class="tree-item-contents heading-link" heading-name="深度学习"><span class="tree-item-title">深度学习</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#大模型"><div class="tree-item-contents heading-link" heading-name="大模型"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">大模型</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#Transformer"><div class="tree-item-contents heading-link" heading-name="Transformer"><span class="tree-item-title">Transformer</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#大模型幻觉"><div class="tree-item-contents heading-link" heading-name="大模型幻觉"><span class="tree-item-title">大模型幻觉</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#优化推理"><div class="tree-item-contents heading-link" heading-name="优化推理"><span class="tree-item-title">优化推理</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#Langchain_等中间件"><div class="tree-item-contents heading-link" heading-name="Langchain 等中间件"><span class="tree-item-title">Langchain 等中间件</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="🌐-软件工程/cs面试题(知识蒸馏).html#&quot;你还有什么要问的？&quot;"><div class="tree-item-contents heading-link" heading-name="&quot;你还有什么要问的？&quot;"><span class="tree-item-title">"你还有什么要问的？"</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

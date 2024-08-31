@@ -1,6 +1,531 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><parsererror xmlns="http://www.w3.org/1999/xhtml" style="display: block; white-space: pre; border: 2px solid #c77; padding: 0 1em 0 1em; margin: 1em; background-color: #fdd; color: black"><h3>This page contains the following errors:</h3><div style="font-family:monospace;font-size:12px">error on line 6240 at column 4456: Input is not proper UTF-8, indicate encoding !
-Bytes: 0x07 0x52 0x41 0x47
-</div><h3>Below is a rendering of the page up to the first error.</h3></parsererror><channel><title><![CDATA[🌱 Digital-Garden]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>🌱 Digital-Garden</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 27 Aug 2024 15:02:11 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 27 Aug 2024 15:00:19 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[生平]]></title><description><![CDATA[<a class="tag" href="?query=tag:小记" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#小记</a> <a class="tag" href="?query=tag:艺术" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#艺术</a> 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><parsererror xmlns="http://www.w3.org/1999/xhtml" style="display: block; white-space: pre; border: 2px solid #c77; padding: 0 1em 0 1em; margin: 1em; background-color: #fdd; color: black"><h3>This page contains the following errors:</h3><div style="font-family:monospace;font-size:12px">error on line 526 at column 565: Input is not proper UTF-8, indicate encoding !
+Bytes: 0x08 0xE5 0xAE 0x83
+</div><h3>Below is a rendering of the page up to the first error.</h3></parsererror><channel><title><![CDATA[🌱 Digital-Garden]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>🌱 Digital-Garden</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 31 Aug 2024 13:55:07 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 31 Aug 2024 13:54:49 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[代码规范]]></title><description><![CDATA[ 
+ <br>
+主要涉及 Python 的代码规范
+<br>
+简单，优雅优雅优雅 KISS
+<br>
+<br>
+@ <a data-tooltip-position="top" aria-label="https://peps.python.org/pep-0008/" rel="noopener" class="external-link" href="https://peps.python.org/pep-0008/" target="_blank">PEP 8 – Style Guide for Python Code | peps.python.org</a>
+
+<br>
+@ <a data-tooltip-position="top" aria-label="https://docs.pydantic.dev/latest/" rel="noopener" class="external-link" href="https://docs.pydantic.dev/latest/" target="_blank">Welcome to Pydantic - Pydantic</a>
+
+<br>
+@ <a data-tooltip-position="top" aria-label="https://library.kre.dp.ua/Books/2-4%20kurs/%D0%9C%D0%BE%D0%B2%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F/Python/Robust%20Python%20ER2_2022.pdf" rel="noopener" class="external-link" href="https://library.kre.dp.ua/Books/2-4%20kurs/%D0%9C%D0%BE%D0%B2%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F/Python/Robust%20Python%20ER2_2022.pdf" target="_blank">《Robust Python》 </a> 健壮的Python
+
+<br><br>
+<br>@ 什么是函数式编程？
+]]></description><link>🌐-软件工程/代码规范.html</link><guid isPermaLink="false">🌐 软件工程/代码规范.md</guid><pubDate>Tue, 20 Aug 2024 08:43:03 GMT</pubDate></item><item><title><![CDATA[服务型制造研究院_项目.excalidraw-NSConflict-null_yoko-mac14.4.1]]></title><description><![CDATA[ 
+ 
+  
+  
+  
+    
+    
+  
+  目标：政策文件大模型目标：语义可视化微调部署前端API 格式 CROS功能要求deepspeedvllm多卡部署底座数据格式微调工具: 阿里百炼, unsloth, llm-factory, autotrainPrompt量化]]></description><link>🌐-软件工程/服务型制造研究院_项目.excalidraw-nsconflict-null_yoko-mac14.4.1.html</link><guid isPermaLink="false">🌐 软件工程/服务型制造研究院_项目.excalidraw-NSConflict-null_yoko-mac14.4.1.md</guid><pubDate>Sat, 31 Aug 2024 13:54:51 GMT</pubDate></item><item><title><![CDATA[排序算法]]></title><description><![CDATA[ 
+ <br><img src="https://cdn.sa.net/2024/04/07/j95DlaIoP8C3gMU.png" referrerpolicy="no-referrer"><br>Info<a data-tooltip-position="top" aria-label="https://leetcode.cn/problems/sort-an-array/" rel="noopener" class="external-link" href="https://leetcode.cn/problems/sort-an-array/" target="_blank">力扣（LeetCode）- 912</a>
+给你一个整数数组&nbsp;nums，请你将该数组升序排列。
+示例 1：
+输入：nums = [5,2,3,1]<br>
+输出：[1,2,3,5]
+示例 2：
+输入：nums = [5,1,1,2,0,0]<br>
+输出：[0,0,1,1,2,5]
+提示：
+
+<br>1 &lt;= nums.length &lt;= 5 * 104
+<br>-5 * 104 &lt;= nums[i] &lt;= 5 * 104
+<br>
+冒泡排序、 选择排序、插入排序是最基础的排序算法,  时间复杂度都是 . 但选择算法由于不具备提前终止条件, 实际速度可能会比冒泡、插入要慢. 
+<br><br>
+<br>算法原理：冒泡排序会遍历数组多次，每次遍历时，通过比较相邻元素，并在必要时交换它们的位置，从而将较大的元素“冒泡”到数组的末尾。这个过程重复进行，直到没有需要交换的元素为止，这时数组就排序完成了。
+<br>是否原地排序：是。冒泡排序通过交换相邻元素的位置，不需要额外的存储空间。
+<br>是否比较排序：是。冒泡排序通过比较相邻元素的值来决定是否需要交换它们的位置。
+<br>是否稳定排序：是。冒泡排序在交换元素时会保持相等元素的原始顺序。
+<br>实现的算法思想：冒泡排序主要是基于比较和交换的思想。尽管它不属于特定的算法类别（如分治法、动态规划等），但它体现了迭代思想的简单应用。
+<br>时间复杂度：平均和最坏的情况都是&nbsp;，其中 &nbsp;是数组的长度。最好的情况，即数组已经是排序状态，时间复杂度是&nbsp;。
+<br>空间复杂度：，因为它是原地排序。
+<br>最差情况：当输入数组完全逆序时，冒泡排序需要进行最大数量的比较和交换操作。
+<br><br>
+<br>算法原理：选择排序的基本思想是通过多次遍历数组来构建最终的排序数组。在每次遍历过程中，选择出当前未排序部分的最小（或最大）元素，然后将其放到已排序序列的末尾。这个过程不断重复，直到整个数组排序完成。
+<br>是否原地排序：是。选择排序通过交换元素位置来排序，不需要额外的存储空间。
+<br>是否比较排序：是。选择排序通过比较元素值来确定每次遍历时未排序部分的最小（或最大）元素。
+<br>是否稳定排序：否。选择排序在选择最小（或最大）元素放到已排序序列的末尾时，可能会改变相等元素的初始相对顺序。
+<br>实现的算法思想：选择排序主要基于选择的思想，每次从未排序的部分选择最小（或最大）的元素，然后放到已排序的部分，直到整个数组排序完成。
+<br>时间复杂度：无论最好、最坏或平均情况，时间复杂度均为&nbsp;，其中&nbsp; &nbsp;是数组的长度。这是因为选择排序需要遍历数组找到最小（或最大）元素，并且这个过程需要重复&nbsp;&nbsp;次。
+<br>空间复杂度: ，因为它是原地排序，不需要额外的存储空间。
+<br>最差情况：由于选择排序的时间复杂度在所有情况下都是&nbsp;，因此没有特定的最差情况。它的性能不受输入数据的影响。
+<br>选择排序由于其简单直观的特性，在理解和实现上非常容易，但由于其固有的&nbsp;&nbsp;时间复杂度，它不适合用于大规模数据的排序。在实际应用中，更高效的排序算法（如快速排序、归并排序）通常是更好的选择。<br><br>
+堆排序算法是由J. W. J. Williams在1964年发明的。他提出了这个算法，并且引入了二叉堆的概念作为有效的优先队列结构。他还发明了二叉堆.
+<br>算法原理:<br>
+堆排序是一种基于比较的排序算法，它利用堆这种数据结构的特性来进行排序。堆是一种完全二叉树，其中每个节点的值都必须大于或等于（最大堆）或小于或等于（最小堆）其子节点的值。堆排序算法可以分解为以下几个主要步骤：<br>
+<br>构建堆（Heapify）：将原始数组转换成最大堆（对于升序排序）或最小堆（对于降序排序）。
+<br>堆调整（Heapsort）：重复执行以下操作，直到堆的大小为1：
+
+<br>将堆顶元素（最大或最小）与堆的最后一个元素交换。
+<br>减小堆的大小，排除掉已经排好的元素。
+<br>对堆顶元素进行下沉操作，以恢复堆的性质。
+
+
+<br>
+<br>原地排序：是。堆排序不需要额外的存储空间，因此是原地排序算法。
+<br>比较排序：是。堆排序通过比较元素的大小来决定元素的位置。
+<br>稳定排序：否。堆排序在调整堆的过程中可能会改变相等元素的原始相对顺序，因此它是不稳定的。
+<br>算法思想：堆排序是基于选择排序的一种改进，其算法思想主要是利用堆这种数据结构来优化选择过程中的查找最大（或最小）元素的操作。它属于选择排序的一种。
+<br>时间复杂度：
+
+<br>最好、最坏和平均情况下的时间复杂度都是&nbsp;，其中&nbsp;是数组的长度。这是因为构建堆的时间复杂度为&nbsp;，而每次调整堆的时间复杂度为&nbsp;，共需调整&nbsp;次。
+
+
+<br>空间复杂度：，因为堆排序是原地排序，不需要额外的存储空间。
+<br>最差时间的情况: 堆排序的最差时间复杂度是&nbsp;，这个情况发生在每次选取最大（或最小）元素后，剩余的元素构成的新堆需要完全重新调整以满足堆的性质时。但由于堆排序的性能主要由堆的高度决定（即&nbsp;），并且在构建和调整堆的过程中，元素的初始排列顺序对时间复杂度的影响不大，因此堆排序的最好、平均和最差时间复杂度都是相同的。
+<br>
+def heapify(arr, n, i):
+    largest = i
+    left = 2 * i + 1
+    right = 2 * i + 2
+
+    if left &lt; n and arr[largest] &lt; arr[left]:
+        largest = left
+
+    if right &lt; n and arr[largest] &lt; arr[right]:
+        largest = right
+
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+
+def heapSort(arr):
+    n = len(arr)
+
+    # Build a maxheap.
+    for i in range(n//2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # One by one extract elements
+    for i in range(n-1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]
+        heapify(arr, i, 0)
+
+# Example usage
+arr = [12, 11, 13, 5, 6, 7]
+heapSort(arr)
+print("Sorted array is:", arr)
+
+复制<br><a data-tooltip-position="top" aria-label="https://www.youtube.com/watch?v=cyE9f_49tl8" rel="noopener" class="external-link" href="https://www.youtube.com/watch?v=cyE9f_49tl8" target="_blank">【博士Vlog】LeetCode 912题 优质解法：堆排序解法详解 - YouTube</a><br><br>锦标赛排序（Tournament Sort）是一种选择排序算法的变体，它通过构建一个锦标赛树（通常是一棵完全二叉树）来选择出最小（或最大）的元素。这种方法在多路归并排序中特别有用，比如，当需要从多个已排序的列表中选择最小的元素以合并成一个新的有序列表时。<br>
+<br>
+算法原理
+
+<br>锦标赛排序的基本思想是将所有参与排序的元素组织成一个锦标赛的形式，通过比较决出胜者（最小或最大元素），然后移除胜者，将其放入最终的排序结果中，并让被胜者继续参与下一轮的比较，直至所有元素都被排序。
+<br>步骤
+
+<br>构建锦标赛树：将所有待排序的元素构建成一个完全二叉树。如果元素数量不是2的幂，则添加一些“虚拟”节点使其成为完全二叉树。
+<br>进行锦标赛：在二叉树中，每个节点都与其两个子节点比较，胜者（较小或较大的元素）上升到父节点，一直进行到树的根节点，根节点即为最终的胜者。
+<br>选择胜者：根节点的元素是当前所有元素中最小（或最大）的，将其选出并放入结果数组中。
+<br>更新锦标赛树：将刚才胜出的元素从树中移除，用一个足够大（或小）的值替换它，以确保它不会在后续的比赛中胜出。然后重新进行锦标赛，找出下一个最小（或最大）元素。
+<br>重复步骤3和4，直到所有元素都被选出，排序完成。
+
+
+
+
+<br>
+原地排序 :  锦标赛排序不是原地排序算法。它需要额外的空间来构建锦标赛树，以及在排序过程中暂存数据。
+
+<br>
+比较排序:  锦标赛排序是一种比较排序算法。它通过比较元素之间的大小来决定元素的顺序。
+
+<br>
+稳定排序: 锦标赛排序可以实现为稳定的，但这取决于具体实现。在构建锦标赛树并选择胜者的过程中，如果处理相等元素的顺序保持一致，则可以保持稳定性；但如果实现不当，稳定性可能会丧失。
+
+<br>
+算法思想
+
+<br>锦标赛排序属于分治法。它通过将问题分解为多个子问题（即在锦标赛树的每个节点进行比较），然后合并这些子问题的解（选择胜者），以此实现排序。
+
+
+<br>
+时间复杂度
+
+<br>最好、平均和最坏情况：锦标赛排序的时间复杂度为(O(n \log n))。无论在最好、平均还是最坏的情况下，时间复杂度都保持不变，因为每个元素都需要通过锦标赛树的比较来确定其位置。
+
+
+<br>
+空间复杂度
+
+<br>锦标赛排序的空间复杂度为(O(n))。需要额外的空间来构建锦标赛树，尽管树的大小与输入数组的大小成正比，但这意味着它需要比原地排序算法更多的内存。
+
+
+<br>
+最坏情况
+
+<br>锦标赛排序的最坏情况时间复杂度仍然是(O(n \log n))，这与最好和平均情况相同。最坏情况发生的原因不是因为数据的不同排列，而是因为算法的结构决定了其性能特点。
+
+
+<br>总的来说，锦标赛排序是一种比较独特的排序算法，它通过构建锦标赛树来逐步筛选出最小（或最大）元素。虽然它的时间复杂度与其他高效的比较排序算法（如快速排序、归并排序）相当，但由于其较高的空间复杂度和实现复杂性，它在实际应用中不如这些更为流行的算法。然而，在某些特定场景下，如多路归并排序，锦标赛排序提供了一种有趣且有效的解决方案。<br><br>
+<br>算法原理：插入排序的工作方式类似于我们排序打扑克牌。它将数组分为已排序和未排序两部分，每次从未排序的部分取出第一个元素，将它插入到已排序部分的适当位置上，以保持已排序部分总是有序的。过程重复，直到未排序的部分为空。
+<br>是否原地排序：是。插入排序通过在数组内移动元素来达到排序的目的，不需要额外的存储空间。
+<br>是否比较排序：是。插入排序通过比较元素值来决定元素之间的相对顺序。
+<br>是否稳定排序：是。插入排序在插入元素时保持相等元素的初始相对顺序，因此是稳定的。
+<br>实现的算法思想：插入排序利用了分治的思想，通过构建一个逐步增长的已排序部分来实现整体的排序。
+<br>时间复杂度：
+
+<br>最好情况：，当输入数组已经是有序的，每次插入都不需要移动已排序部分的元素。
+<br>平均情况和最坏情况：，在这些情况下，插入元素可能需要移动已排序部分的多个元素来找到合适的插入位置。
+
+
+<br>空间复杂度：，插入排序是原地排序算法，不需要额外的存储空间。
+<br>最差情况：当输入数组完全逆序时，每次插入都要移动所有已排序的元素，这是插入排序的最差情况。
+<br>插入排序虽然在最坏情况下的时间复杂度与选择排序和冒泡排序相同，但在部分有序的数组或小规模数据集上，它通常表现得更好，因为它可以提前终止内层循环。此外，由于其稳定性，插入排序在某些特定应用中（如需要保持相等元素相对顺序的场景）是非常有用的。<br><br>希尔排序（Shell Sort）是一种基于插入排序的算法，通过引入“增量”概念来改进插入排序的性能。它是由Donald Shell于1959年提出的。希尔排序的核心思想是将原始列表分成多个子列表，每个子列表包含位于原始列表中等距离（增量）的元素，并对每个子列表进行插入排序。随着算法的进行，增量会逐步减少，最终减少到1，整个列表就变成了基本有序的状态，最后一次插入排序将使得列表完全有序。<br>
+<br>
+算法原理
+
+<br>选择增量：增量序列的选择对算法的性能有很大影响。最初的增量序列可以是，之后每次减半，直到增量为1。
+<br>进行插入排序：对于每个增量 ，将列表分成  个子列表，每个子列表由距离为  的元素组成。对每个子列表进行插入排序。
+<br>减少增量：减少增量的值，并重复上述步骤，直到增量为1，最后进行一次标准的插入排序。
+
+
+<br>
+原地排序：是。希尔排序不需要额外的存储空间，因此是原地排序算法。
+
+<br>
+比较排序：是。希尔排序通过比较元素的大小来决定元素的位置。
+
+<br>
+稳定排序：否。由于希尔排序在不同增量的阶段中可能会改变相等元素的原始相对顺序，因此它是不稳定的。
+
+<br>
+算法思想：希尔排序是插入排序的一种高效版本，属于分组插入排序。算法的思想是通过预排序（使用较大增量时的插入排序）来改善插入排序在面对大规模乱序列表时的性能。
+
+<br>
+时间复杂度：希尔排序的时间复杂度依赖于增量序列的选择。最坏情况下的时间复杂度可以达到，但对于某些特定的增量序列，时间复杂度可以降低到或更低。
+
+<br>
+空间复杂度：，因为希尔排序是原地排序。
+
+<br>
+最差时间的情况:  希尔排序的最差时间复杂度通常发生在最坏的增量序列选择下。如果增量序列不是最优的，算法的效率会大大降低。例如，如果增量序列仅仅是简单地每次减半，那么在某些情况下，算法的时间复杂度可能接近。然而，通过合理选择增量序列，可以显著提高希尔排序的性能。
+
+<br><br>归并排序（Merge Sort）是一种高效、稳定的排序算法，基于分治法（Divide and Conquer）的原理。它将一个数组分成两半，对每一半递归地应用归并排序，然后将两个排序好的半部分合并成一个完整的排序数组。归并排序在最坏情况、最好情况和平均情况下都能保持(O(n \log n))的时间复杂度，其中(n)是数组的长度。<br>
+<br>算法与案例
+
+<br>分解：将当前序列分成两个长度几乎相等的子序列。
+<br>递归排序：递归地对两个子序列进行归并排序。
+<br>合并（Merge）：将两个排序好的子序列合并成一个最终的排序序列。
+
+
+<br>归并操作是归并排序算法中最重要的步骤，它将两个已排序的序列合并成一个序列。合并步骤通常通过一个临时数组来辅助完成。<br>
+<br>稳定排序：是。归并排序保持了相等元素之间的相对顺序，因此它是稳定的排序算法。
+<br>非原地排序：通常不是。归并排序需要一个与原数组相同大小的临时数组来存放在合并过程中创建的排序数组，因此它通常不是原地排序算法。
+<br>算法思想：归并排序是典型的分治策略应用，它将问题分解为易于解决的子问题，解决子问题后再将结果合并以解决原问题。
+<br>时间复杂度：无论是最好、最坏还是平均情况，时间复杂度都是。
+<br>空间复杂度：，主要是因为合并过程需要等大小的额外空间。
+<br>最差时间的情况:<br>
+由于归并排序的性能主要由分解和合并操作决定，而这些操作的时间复杂度与输入数组的实际顺序无关，因此归并排序的时间复杂度在最好、平均和最坏情况下都是。这意味着归并排序没有特定的“最差情况”场景，它的性能相对于输入数据的大小是稳定的。
+<br>def merge_sort(arr):
+    if len(arr) &gt; 1:
+        mid = len(arr) // 2  # 找到中间位置，进行分割
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+
+        merge_sort(left_half)  # 递归排序左半部分
+        merge_sort(right_half)  # 递归排序右半部分
+
+        # 合并两个有序子数组
+        i = j = k = 0
+        # 当两个子数组都还有元素时
+        while i &lt; len(left_half) and j &lt; len(right_half):
+            if left_half[i] &lt; right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+
+        # 处理左侧子数组中剩余的元素
+        while i &lt; len(left_half):
+            arr[k] = left_half[i]
+            i += 1
+            k += 1
+
+        # 处理右侧子数组中剩余的元素
+        while j &lt; len(right_half):
+            arr[k] = right_half[j]
+            j += 1
+            k += 1
+
+# 示例数组
+arr = [12, 11, 13, 5, 6, 7]
+print("原始数组:", arr)
+
+merge_sort(arr)
+print("排序后的数组:", arr)
+
+复制<br><br>Caution无脑唆哈, 看见排序直接快排<br>
+<br>算法原理：快速排序使用分治法的策略来把一个序列分为两个子序列。步骤为：
+
+<br>从序列中挑出一个元素，称为 "基准"（pivot）。
+<br>重新排序序列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于序列的中间位置。这个称为分区（partition）操作。
+<br>递归地（recursive）把小于基准值元素的子序列和大于基准值元素的子序列排序。
+
+
+<br>是否原地排序：是。快速排序在分区过程中，通过交换元素位置，不需要额外的存储空间。
+<br>是否比较排序：是。快速排序通过比较元素值来决定它们的相对位置。
+<br>是否稳定排序：否。快速排序在分区过程中可能会改变相等元素的初始相对顺序。
+<br>实现的算法思想：分治法。快速排序通过分治法将一个大问题分解为小问题来递归地解决。
+<br>时间复杂度：平均情况下，时间复杂度为&nbsp;，最坏情况（如每次分区选择的基准都是最小或最大元素）下，时间复杂度为&nbsp;。最好情况（分区平衡）下，时间复杂度也是&nbsp;。
+<br>空间复杂度：，主要是递归调用的栈空间。
+<br>最差情况：当输入数组已经是正序或逆序时，每次分区只能减少一个元素，导致递归深度达到最大，这时快速排序的性能最差。
+<br>快速排序是一种非常高效的排序算法，尤其是在平均情况下，但它的性能依赖于基准的选择。<br>
+class Solution:
+	def sortArray(self, nums: List[int]) -&gt; List[int]:
+		if len(nums) &lt;= 1: return nums
+
+		pivot = random.choice(nums)
+
+		left, mid, right = [], [], []
+		for i in nums:
+			if i &gt; pivot : right.append(i)
+			elif i &lt; pivot : left.append(i)
+			else: mid.append(i)
+			
+		return self.sortArray(left) + mid + self.sortArray(right)
+
+复制<br><br>
+适用场景:  数据分布在一定范围中
+<br>桶排序（Bucket Sort）是一种分布式排序算法，它将元素分布到若干个称为“桶”的区间中，然后对每个桶中的元素进行排序，最后将各个桶中的元素依次取出，组成一个有序的数组。桶排序非常适合用在输入数据均匀分布在一个范围内的场景。<br>
+<br>算法原理
+
+<br>初始化桶：根据预设或输入数据的特点，创建若干个桶。
+<br>分配元素到桶中：遍历输入数组，根据某种映射函数，将每个元素分配到对应的桶中。
+<br>对每个桶内部进行排序：可以使用不同的排序算法对桶内元素进行排序，例如快速排序、插入排序等。
+<br>合并桶：按照顺序依次将各个桶中的元素取出，放入原数组或新数组中，得到有序数组。
+
+
+<br>非比较排序：桶排序不直接比较元素之间的大小关系，而是通过元素的分布将它们分到不同的桶中。
+<br>时间复杂度：在最佳情况下，当输入的数据可以均匀地分配到每个桶中时，桶排序的时间复杂度为(O(n+k))，其中(n)是元素数量，(k)是桶的数量。在最坏的情况下，所有元素都分配到同一个桶中，时间复杂度退化为(O(n^2))。
+<br>空间复杂度：(O(n+k))，需要额外的空间来创建桶和存储桶内元素。
+<br>稳定性：桶排序可以是稳定的，这取决于桶内排序算法的稳定性。
+<br>def bucket_sort(arr, bucketSize=5):
+    if len(arr) == 0:
+        return arr
+
+    # 找到最大值和最小值，确定桶的数量
+    minValue = min(arr)
+    maxValue = max(arr)
+    bucketCount = (maxValue - minValue) // bucketSize + 1
+    buckets = [[] for _ in range(bucketCount)]
+
+    # 将数组中的值分配到各个桶里
+    for i in range(len(arr)):
+        bucketIndex = (arr[i] - minValue) // bucketSize
+        buckets[bucketIndex].append(arr[i])
+
+    # 对每个桶进行排序，然后合并结果
+    arr.clear()
+    for bucket in buckets:
+        bucket.sort()  # 这里可以使用不同的排序算法
+        arr.extend(bucket)
+
+# 示例
+arr = [4.2, 0.5, 1.6, 3.8, 2.7, 9.8, 7.1, 8.6, 6.7]
+print("原始数组:", arr)
+
+bucket_sort(arr, bucketSize=2)
+print("排序后的数组:", arr)
+
+复制<br>这个实现首先计算了最大值和最小值，以确定桶的数量和范围。然后，遍历输入数组，根据元素值将它们分配到相应的桶中。之后，对每个桶内的元素进行排序（这里简单地使用了Python的内置排序），最后按顺序合并所有桶中的元素。<br>桶排序的效率和桶的大小及分布有很大关系。在实际应用中，选择合适的桶大小和分布策略是优化桶排序性能的关键。<br><br>
+适用场景: 大范围或多位数的整数排序
+<br>基数排序（Radix Sort）是一种非比较的排序算法，它通过分别对整数的每个位进行排序来整体排序整个数组。这种方法对于大量数据进行排序时非常有效，尤其是当数字的位数不是很高时。基数排序可以用两种方法实现：最低位优先（LSD）和最高位优先（MSD）。<br>
+<br>
+算法原理
+
+<br>基数排序的基本思想是将整数按位切割成不同的数字，然后按每个位分别进行排序。这个过程可以从最低位开始，也可以从最高位开始。
+
+
+<br>最低位优先（LSD）：首先根据数字的最低位进行排序，然后是次低位，依此类推，直到最高位。每一次排序都是稳定的，以保证之前位的排序结果不会被破坏。
+<br>最高位优先（MSD）：首先根据数字的最高位进行排序，然后递归地对每个桶中的数据根据次高位进行排序，依此类推，直到最低位。MSD的实现通常使用递归。
+
+
+<br>
+是否原地排序
+
+<br>基数排序不是原地排序算法。在排序过程中，它需要额外的空间来存储临时的排序结果。
+
+
+<br>
+比较排序
+
+<br>基数排序不是比较排序。它不通过比较元素之间的大小来决定顺序，而是通过将数字分解成不同的位来实现排序。
+
+
+<br>
+稳定排序
+
+<br>基数排序可以实现为稳定排序。通过在每一位的排序过程中使用稳定的排序算法（如计数排序）来保证排序的稳定性。
+
+
+<br>
+算法思想
+
+<br>基数排序基于桶排序的思想，通过将整数分解为不同的位，然后对每一位使用稳定排序算法进行排序。
+
+
+<br>
+时间复杂度
+
+<br>最好、平均和最坏情况：基数排序的时间复杂度为O(nk)**，其中(n)是数组长度，(k)是数字的最大位数。
+
+
+<br>
+空间复杂度
+
+<br>基数排序的空间复杂度为O(n + k)，其中(n)是数组长度，(k)是基数（例如，十进制排序中的基数是10）。
+
+
+<br>
+应用场景<br>
+基数排序适用于：
+
+<br>数字的位数相对较小的情况，如电话号码、身份证号码等。
+<br>当数据范围很大而直接使用比较排序算法会导致较高时间复杂度时。
+<br>当需要稳定排序时。
+
+基数排序的效率高于传统的比较排序算法（如快速排序、归并排序等），尤其是在处理大量数据时。然而，它对于数据的类型和范围有特定的要求，并且需要额外的空间来进行排序。
+
+<br>Warning计数排序和基数排序使用于特殊序列的排序, 适用场景较小, 实现难度较高<br><br>
+适用场景: 计数排序适用于小范围整数的排序
+<br>
+<br>
+算法原理<br>
+计数排序工作原理基于一个简单的事实：如果你知道了比某个数小的数的个数，那么你就能确定这个数在排序后数组的位置。
+
+<br>计数阶段：首先，遍历输入数组，统计每个值的出现次数，并将计数存储在一个临时数组中，该数组的索引对应输入数组中的数值。
+<br>累加阶段：然后，对这个临时数组做一次累加操作。累加后，每个索引的值表示在排序数组中，小于或等于该索引值的元素数量。
+<br>排序阶段：最后，遍历输入数组，根据累加数组中的计数，将每个元素放到排序后数组的正确位置上，同时更新累加数组中的计数。
+
+
+<br>
+是否原地排序
+
+<br>计数排序不是原地排序算法。它需要额外的空间来存储计数数组和排序后的结果。
+
+
+<br>
+比较排序
+
+<br>计数排序不是比较排序。它不通过比较元素之间的大小来决定其顺序，而是通过计数和索引来确定每个元素的正确位置。
+
+
+<br>
+稳定排序
+
+<br>计数排序可以实现为稳定排序。如果在排序阶段，从后向前遍历输入数组（逆序遍历），并且正确更新累加数组中的计数，就可以保持相同元素的原始顺序，从而保持排序的稳定性。
+
+
+<br>
+算法思想
+
+<br>计数排序的算法思想基于哈希表，其中键（Key）是观察到的元素，值（Value）是该元素出现的次数。然后通过对计数进行累加，将这些计数转换为排序后数组中的位置索引。
+
+
+<br>
+时间复杂度
+
+<br>最好、平均和最坏情况：计数排序的时间复杂度为O(n + k)，其中(n)是数组长度，(k)是数组中数据的范围。
+
+
+<br>
+空间复杂度
+
+<br>计数排序的空间复杂度为O(k)，其中(k)是数组中数据的范围。
+
+
+<br>
+应用场景
+
+<br>计数排序非常适合于那些数据范围不大的场景。例如，排序的元素是小范围的整数，或者当你有关于数据范围的先验知识时。由于其线性时间复杂度，它在这些情况下比基于比较的排序算法（如快速排序、归并排序）要快得多。然而，当(k)（数据范围）相对于(n)（数据量）非常大时，计数排序的空间需求和效率可能会成为问题。
+
+
+<br><br><img src="https://pic4.zhimg.com/80/v2-d7c93dd7d67ae9654918923a760f38fd_1440w.webp" referrerpolicy="no-referrer"><br>
+<br>Python的首席开发者Tim Peters在2002年发明了 Tim Sort, 是多种语言的默认算法
+<br>稳定排序(排序后相等元素相对位置不变) , 在包含有序子数组的数据中特别有效 ⬅️ 所以特别适合真实数据
+<br>Tim Sort 是多种算法的融合主要是，先拆序列，然后对子序列进行插入排序，然后用优化后归并排序合并子序列。下面是算法的具体步骤：<a data-tooltip-position="top" aria-label="https://www.infopulse.com/blog/timsort-sorting-algorithm" rel="noopener" class="external-link" href="https://www.infopulse.com/blog/timsort-sorting-algorithm" target="_blank">Timsort Sorting Algorithm - Infopulse</a>
+<br>对于数组长度为 N 的数组 nums，有遮掩的步骤：<br>
+<br>选择拆封字数组的长度 minirun. minirun 不能太大，因为插入排序只对小数组有效。不能太小，这样会导致之后归并的小数组太多。还最后是 N / minirun = 2的幂，因为归并对相同长度的数组最有效。作者在实验中发现 minirun 在 32-64 之间效率最高
+<br>....<br>
+<br>TimSort 的具体实现，在面对不同数据特性时还有很多优化技巧
+]]></description><link>🌐-软件工程/排序算法.html</link><guid isPermaLink="false">🌐 软件工程/排序算法.md</guid><pubDate>Tue, 20 Aug 2024 08:43:03 GMT</pubDate><enclosure url="https://cdn.sa.net/2024/04/07/j95DlaIoP8C3gMU.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://cdn.sa.net/2024/04/07/j95DlaIoP8C3gMU.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[实用主义者的算法]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://github.com/yoko19191/practicalism_algorithms" rel="noopener" class="external-link" href="https://github.com/yoko19191/practicalism_algorithms" target="_blank">GitHub - yoko19191/practicalism_algorithms</a><br><br>]]></description><link>🌐-软件工程/实用主义者的算法.html</link><guid isPermaLink="false">🌐 软件工程/实用主义者的算法.md</guid><pubDate>Tue, 20 Aug 2024 08:43:02 GMT</pubDate></item><item><title><![CDATA[图算法]]></title><description><![CDATA[ 
+ <br>Abstract<a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/zh-hans/%E5%9B%BE_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)" rel="noopener" class="external-link" href="https://zh.wikipedia.org/zh-hans/%E5%9B%BE_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)" target="_blank">图 (数据结构) - 维基百科，自由的百科全书</a>
+<a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" target="_blank">Graph Data Structure And Algorithms - GeeksforGeeks</a>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240403150314/graph-data-structure.webp" referrerpolicy="no-referrer">
+Q: 什么是图? 图有什么表示方式? 图有哪些表示方式? 什么是图算法? 图算法用于解决什么问题? 
+A: 
+Graph is a non-linear data structure that consist of a collection of nodes connected by edges. 
+这种数据结构通常用于表示实体直接的抽象关系? 比如地图上的两个目的地, 知识图谱, 人际关系等. 
+我们可以用 符号 G(V, E) 来表示一个图. Grapha(Vertices, Edges)
+我们可以用点和线直接表示图.<br>
+也可以用 <a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/wiki/%E9%82%BB%E6%8E%A5%E8%A1%A8" rel="noopener" class="external-link" href="https://zh.wikipedia.org/wiki/%E9%82%BB%E6%8E%A5%E8%A1%A8" target="_blank"><strong></strong></a>邻接表(adjacency list)<br>
+或者 <a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/wiki/%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5" rel="noopener" class="external-link" href="https://zh.wikipedia.org/wiki/%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5" target="_blank"><strong></strong></a>邻接矩阵(adjacency matrix)<br>
+或者<a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/Incidence_matrix" rel="noopener" class="external-link" href="https://en.wikipedia.org/wiki/Incidence_matrix" target="_blank">关联矩阵(incidence matrix)</a>
+这些不同的图表示或者存储方法, 在不同的图操作中有不同的复杂度. e.g.邻接表添加节点和边的开销都是O(1), 而邻接矩阵移除边和检查两节点相邻的开销都是O(1). 维基百科上有详细的复杂度对比.
+图有很多性质,比如是否有向是否有权是否完全, 根据这些性质我们可以将图进行分类:
+我们根据边有无加权, 将图二分为
+
+<br>加权图(Weight Graph)：其中边具有与其相关的权重或成本的图。示例：道路网络图，其中权重可以表示两个城市之间的距离。
+<br>未加权图(Unweight Graph)：其中边没有与其相关的权重或成本的图。示例：社交网络图，其中边代表友谊。
+
+根据边有无方向可以将图分为:
+
+<br>无向图(Undirected Graph)：边没有方向的图，即边上没有指示遍历方向的箭头。示例：友谊无方向性的社交网络图。
+<br>有向图(Directed Graph)：边有方向的图，即边上有箭头指示遍历的方向。示例：网页图表，其中页面之间的链接是定向的。
+
+根据图中是否存在环（即一条路径的起点和终点是同一个顶点），我们可以将图进一步分为：
+
+<br>有环图(Cyclic Graph)：图中存在至少一个环。无论是有向图还是无向图，只要存在环，就可以被称为有环图。
+<br>无环图(Acyclic Graph)：图中不存在任何环。例如，一棵树（Tree）就是一种特殊的无环图，其中任何两个顶点之间都有且仅有一条路径。
+
+结合图的方向性和是否存在环的性质，我们可以得到一些特殊类型的图：
+
+<br>有向无环图(Directed Acyclic Graph, DAG)：这是一种既有方向又无环的图。DAG在许多领域都有应用，例如在计算机科学中，它被用于表示数据的依赖关系。
+<br>无向无环图(Undirected Acyclic Graph)：这是一种既无方向又无环的图，也就是我们通常所说的森林（Forest），由多棵树（Tree）组成。示例：每个人都与其父母有联系的家谱
+
+此外，还有一些其他类型的图，例如：
+
+<br>完全图(Complete Graph)：在无向图中，如果任意两个顶点都有边相连，那么这个图就是完全图。在有向图中，如果任意两个顶点都有双向边相连，那么这个图也是完全图。示例：锦标赛图表，其中每个玩家都与其他玩家进行比赛。
+<br>二部图(Bipartite Graphs)：一种图，其中顶点可以分为两个不相交的集合，使得每条边将一个集合中的顶点连接到另一个集合中的顶点。示例：求职者图，其中顶点可分为求职者和职位空缺。
+<br>子图(Subgraph)：一个图的顶点集和边集都是原图的子集，那么这个图就是原图的子图。
+<br>连通图(Connected Graph)：在无向图中，如果从任意一个顶点都能到达任意另一个顶点，那么这个图就是连通图。在有向图中，如果每一对顶点之间都存在双向路径，那么这个图就是强连通图。
+
+
+See more<br>
+[Basic Properties of a Graph - GeeksforGeeks](<a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/basic-%3E" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/basic-%3E" target="_blank">https://www.geeksforgeeks.org/basic-&gt;</a> properties-of-a-graph/)<br>
+<a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/graph-types-and-applications/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/graph-types-and-applications/" target="_blank">Types of Graphs with Examples - GeeksforGeeks</a>
+
+图算法则是帮助我们分析和利用图结构的算法, 按照解决问题的不同图算法大致可以分为:
+
+<br>最短路径问题：这是图论中最常见的问题之一，即在图中找到两个节点之间的最短路径。这种问题可以通过Dijkstra算法、Bellman-Ford算法或Floyd-Warshall算法等来解决。
+<br>最小生成树问题：在一个连通图中，找到一个包含所有顶点且总边权最小的树。这种问题可以通过Prim算法或Kruskal算法来解决。
+<br>最大流问题：在一个有向图中，找到两个指定节点之间的最大流量。这种问题可以通过Ford-Fulkerson算法或Edmonds-Karp算法来解决。
+<br>连通性问题：确定图中所有节点是否都是连通的，或者找出图中的所有连通分量。这种问题可以通过深度优先搜索(DFS)或广度优先搜索(BFS)来解决。
+<br>拓扑排序问题：在一个有向无环图（DAG）中，找到一个线性的顶点顺序，使得所有的边都从前向后指。这种问题可以通过Kahn算法或DFS来解决。
+<br>强连通分量问题：在有向图中，找出所有的强连通分量（在每个强连通分量中，任意两个顶点都是互相可达的）。这种问题可以通过Tarjan算法或Kosaraju算法来解决。
+<br>最小割问题：找出一个图中的最小割集，即移除最少的边使得图不再连通。这个问题可以通过最大流最小割定理和Ford-Fulkerson算法来解决。
+<br>维基百科里讲了一些图的基本操作、并行计算、图的表示方式、图的压缩和38种图算法.<br>
+<a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/zh-hans/%E5%9B%BE_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)" rel="noopener" class="external-link" href="https://zh.wikipedia.org/zh-hans/%E5%9B%BE_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)" target="_blank">图 (数据结构) - 维基百科，自由的百科全书</a><br>
+<a data-tooltip-position="top" aria-label="https://zh.wikipedia.org/wiki/Category:%E5%9B%BE%E7%AE%97%E6%B3%95" rel="noopener" class="external-link" href="https://zh.wikipedia.org/wiki/Category:%E5%9B%BE%E7%AE%97%E6%B3%95" target="_blank">分类:图算法 - 维基百科，自由的百科全书</a><br>接下来我们按照图算法解决问题的不同, 详细讨论下图算法的具体实现.<br>
+<a data-tooltip-position="top" aria-label="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" rel="noopener" class="external-link" href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" target="_blank">Graph Data Structure And Algorithms - GeeksforGeeks</a><br><br>深度优先搜索DFS<br>
+广度优先搜索BFS<br><br>Dijkstra<br>
+Bellman-Ford<br>
+Floyd-Warshall<br><br>Kruskal算法<br>
+Prim算法<br><br><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/80567318" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/80567318" target="_blank">总结｜最大流（网络流基础概念+三个算法） - 知乎</a><br>Ford-Fulkerson algorithm<br>Edmonds–Karp algorithm:<br>Dinic's algorithm<br>
+<br>推送-重新标签（Push-relabel）算法
+<br>最小费用最大流（Min-cost max-flow)
+<br><br><br><br>]]></description><link>🌐-软件工程/图算法.html</link><guid isPermaLink="false">🌐 软件工程/图算法.md</guid><pubDate>Tue, 13 Aug 2024 09:06:02 GMT</pubDate><enclosure url="https://media.geeksforgeeks.org/wp-content/uploads/20240403150314/graph-data-structure.webp" length="0" type="image/webp"/><content:encoded>&lt;figure&gt;&lt;img src="https://media.geeksforgeeks.org/wp-content/uploads/20240403150314/graph-data-structure.webp"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[CS面试题(知识蒸馏)]]></title><description/></item><item><title><![CDATA[生平]]></title><description><![CDATA[<a class="tag" href="?query=tag:小记" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#小记</a> <a class="tag" href="?query=tag:艺术" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#艺术</a> 
  <br><a href=".?query=tag:小记" class="tag" target="_blank" rel="noopener">#小记</a> <a href=".?query=tag:艺术" class="tag" target="_blank" rel="noopener">#艺术</a> <br><br>莎士比亚（William Shakespeare）是英国文学史上最著名的剧作家之一，也是世界文学史上的巨擘。他生于1564年4月23日（这一日期是推测，因为没有确凿的出生证明，但他的洗礼日期为1564年4月26日）在英国斯特拉特福镇（Stratford-upon-Avon），并于1616年4月23日去世。<br>莎士比亚生于一个相对富裕的家庭。他的父亲约翰·莎士比亚（John Shakespeare）是一个手套制造商和地方政治家，母亲玛丽·艾登（Mary Arden）出自一个富裕的家庭。莎士比亚大约在1585年至1592年间移居到伦敦，在那里开始了他的职业生涯。他先是成为一个演员，然后逐渐成为剧作家和合伙人之一的伦敦剧院——格洛布剧院（Globe Theatre）。<br>莎士比亚的作品涵盖了人性、政治、爱情、仇恨、战争等多种主题，至今仍然被广泛研究和演出，影响深远<br><br>莎士比亚的作品主要包括戏剧、诗歌和其他短篇作品。他的戏剧大致可以分为三类：悲剧、喜剧和历史剧。<br><br>这类作品通常以悲惨的结局来展示人类命运的沉重和复杂。其中著名的作品有<br>
 <br>《奥赛罗》（Othello）
 <br>《李尔王》（King Lear）
@@ -6239,7 +6764,7 @@ Entity Extraction Result by GPT-4 效果有限
 <br><a data-tooltip-position="top" aria-label="https://qanything.ai/#/" rel="noopener" class="external-link" href="https://qanything.ai/#/" target="_blank">QAnything</a><br><a data-tooltip-position="top" aria-label="https://www.langflow.org/" rel="noopener" class="external-link" href="https://www.langflow.org/" target="_blank">Langflow - Create your chatbot!</a><br><a data-tooltip-position="top" aria-label="https://flowiseai.com/" rel="noopener" class="external-link" href="https://flowiseai.com/" target="_blank">Flowise - Low code LLM Apps Builder</a><br><a data-tooltip-position="top" aria-label="https://github.com/dataelement/bisheng" rel="noopener" class="external-link" href="https://github.com/dataelement/bisheng" target="_blank">GitHub - dataelement/bisheng: Bisheng is an open LLM devops platform for next generation AI applications.</a><br><br><a data-tooltip-position="top" aria-label="https://github.com/geekan/MetaGPT/blob/main/docs/README_CN.md" rel="noopener" class="external-link" href="https://github.com/geekan/MetaGPT/blob/main/docs/README_CN.md" target="_blank">MetaGPT/docs/README_CN.md at main · geekan/MetaGPT · GitHub</a><br><a data-tooltip-position="top" aria-label="https://microsoft.github.io/autogen/" rel="noopener" class="external-link" href="https://microsoft.github.io/autogen/" target="_blank">AutoGen | AutoGen</a><br><br>GPT-Sovits <br><a data-tooltip-position="top" aria-label="https://github.com/argmaxinc/WhisperKit" rel="noopener" class="external-link" href="https://github.com/argmaxinc/WhisperKit" target="_blank">GitHub - argmaxinc/WhisperKit: Swift native on-device speech recognition with Whisper for Apple Silicon</a><br>
 <br>一个方便将OpenAI Whisper模型本地部署集成到Swift项目的包
 <br><a data-tooltip-position="top" aria-label="https://www.bilibili.com/video/BV1zK421t7zs/?spm_id_from=333.788.top_right_bar_window_history.content.click&amp;vd_source=427a8f6991c46f06262700ed0e9203dc" rel="noopener" class="external-link" href="https://www.bilibili.com/video/BV1zK421t7zs/?spm_id_from=333.788.top_right_bar_window_history.content.click&amp;vd_source=427a8f6991c46f06262700ed0e9203dc" target="_blank">WhisperKit：apple手机运行openai语音模型whisper，零门槛构建实时语音识别及翻译，实现终端apple设备0延迟、0费用、高准确识别翻译_哔哩哔哩_bilibili</a>
-<br><br><a data-tooltip-position="top" aria-label="https://www.microsoft.com/en-us/research/project/vall-e-x/" rel="noopener" class="external-link" href="https://www.microsoft.com/en-us/research/project/vall-e-x/" target="_blank">VALL-E (X)</a><br><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/684522045" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/684522045" target="_blank">【AIGC-扩散模型系列15】透明图图层生成，ControlNet作者新作，大利好应用设计领域：Transparent Image Layer Diffusion - 知乎</a><br><br><a data-tooltip-position="top" aria-label="https://app.multion.ai/" rel="noopener" class="external-link" href="https://app.multion.ai/" target="_blank">Sign in to MultiOn</a><br><a data-tooltip-position="top" aria-label="https://agentgpt.reworkd.ai/zh" rel="noopener" class="external-link" href="https://agentgpt.reworkd.ai/zh" target="_blank">AgentGPT</a><br><a data-tooltip-position="top" aria-label="https://lumalabs.ai/" rel="noopener" class="external-link" href="https://lumalabs.ai/" target="_blank">Luma AI</a><br><a data-tooltip-position="top" aria-label="https://www.popai.pro/" rel="noopener" class="external-link" href="https://www.popai.pro/" target="_blank">PopAi: Your Personal AI Workspace</a><br><br><a data-tooltip-position="top" aria-label="https://explorer.globe.engineer/" rel="noopener" class="external-link" href="https://explorer.globe.engineer/" target="_blank">explorer.globe.engineer</a><br><a data-tooltip-position="top" aria-label="https://studio.albus.org/" rel="noopener" class="external-link" href="https://studio.albus.org/" target="_blank">Albus AI - Explore, Learn, Create</a><br><a data-tooltip-position="top" aria-label="https://www.phind.com/search?home=true" rel="noopener" class="external-link" href="https://www.phind.com/search?home=true" target="_blank">Phind</a><br><a data-tooltip-position="top" aria-label="https://kimi.moonshot.cn/" rel="noopener" class="external-link" href="https://kimi.moonshot.cn/" target="_blank">Kimi.ai - 帮你看更大的世界</a><br><a data-tooltip-position="top" aria-label="https://rationale.jina.ai/" rel="noopener" class="external-link" href="https://rationale.jina.ai/" target="_blank">Rationale - a revolutionary decision-making AI powered by the latest GPT and in-context learning</a><br><br><a data-tooltip-position="top" aria-label="https://www.airgram.io/" rel="noopener" class="external-link" href="https://www.airgram.io/" target="_blank">Airgram | AI Assistant for Automated Meeting Notes &amp; Summary</a><br><br><a data-tooltip-position="top" aria-label="https://bloop.ai/" rel="noopener" class="external-link" href="https://bloop.ai/" target="_blank">bloop | Find Code. Fast.</a><br><a data-tooltip-position="top" aria-label="https://v0.dev/" rel="noopener" class="external-link" href="https://v0.dev/" target="_blank">v0 by Vercel</a><br><a data-tooltip-position="top" aria-label="https://screenshottocode.com/" rel="noopener" class="external-link" href="https://screenshottocode.com/" target="_blank">Screenshot to Code</a><br><a data-tooltip-position="top" aria-label="https://devv.ai/zh" rel="noopener" class="external-link" href="https://devv.ai/zh" target="_blank">Devv</a><br><a data-tooltip-position="top" aria-label="https://www.warp.dev/" rel="noopener" class="external-link" href="https://www.warp.dev/" target="_blank">Warp: Your terminal, reimagined</a><br><br><a data-tooltip-position="top" aria-label="https://www.weshop.com/" rel="noopener" class="external-link" href="https://www.weshop.com/" target="_blank">WeShop唯象妙境</a><br><a data-tooltip-position="top" aria-label="https://app.aiwefix.com/login" rel="noopener" class="external-link" href="https://app.aiwefix.com/login" target="_blank">WeFixAI | 工作台</a><br><a data-tooltip-position="top" aria-label="https://motiff.com/" rel="noopener" class="external-link" href="https://motiff.com/" target="_blank">motiff.com</a><br><br><a data-tooltip-position="top" aria-label="https://www.suno.ai/" rel="noopener" class="external-link" href="https://www.suno.ai/" target="_blank">Suno AI</a><br>]]></description><link>💾-科技工程/aigc/awesome-building-blocks.html</link><guid isPermaLink="false">💾 科技工程/AIGC/Awesome Building Blocks.md</guid><pubDate>Tue, 20 Aug 2024 08:43:01 GMT</pubDate></item><item><title><![CDATA[Create@AI创客松「AI企服」超级展会决赛]]></title><description/></item><item><title><![CDATA[Stable Diffusion 使用指南]]></title><description><![CDATA[ 
+<br><br><a data-tooltip-position="top" aria-label="https://www.microsoft.com/en-us/research/project/vall-e-x/" rel="noopener" class="external-link" href="https://www.microsoft.com/en-us/research/project/vall-e-x/" target="_blank">VALL-E (X)</a><br><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/684522045" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/684522045" target="_blank">【AIGC-扩散模型系列15】透明图图层生成，ControlNet作者新作，大利好应用设计领域：Transparent Image Layer Diffusion - 知乎</a><br><br><a data-tooltip-position="top" aria-label="https://app.multion.ai/" rel="noopener" class="external-link" href="https://app.multion.ai/" target="_blank">Sign in to MultiOn</a><br><a data-tooltip-position="top" aria-label="https://agentgpt.reworkd.ai/zh" rel="noopener" class="external-link" href="https://agentgpt.reworkd.ai/zh" target="_blank">AgentGPT</a><br><a data-tooltip-position="top" aria-label="https://lumalabs.ai/" rel="noopener" class="external-link" href="https://lumalabs.ai/" target="_blank">Luma AI</a><br><a data-tooltip-position="top" aria-label="https://www.popai.pro/" rel="noopener" class="external-link" href="https://www.popai.pro/" target="_blank">PopAi: Your Personal AI Workspace</a><br><br><a data-tooltip-position="top" aria-label="https://explorer.globe.engineer/" rel="noopener" class="external-link" href="https://explorer.globe.engineer/" target="_blank">explorer.globe.engineer</a><br><a data-tooltip-position="top" aria-label="https://studio.albus.org/" rel="noopener" class="external-link" href="https://studio.albus.org/" target="_blank">Albus AI - Explore, Learn, Create</a><br><a data-tooltip-position="top" aria-label="https://www.phind.com/search?home=true" rel="noopener" class="external-link" href="https://www.phind.com/search?home=true" target="_blank">Phind</a><br><a data-tooltip-position="top" aria-label="https://kimi.moonshot.cn/" rel="noopener" class="external-link" href="https://kimi.moonshot.cn/" target="_blank">Kimi.ai - 帮你看更大的世界</a><br><a data-tooltip-position="top" aria-label="https://rationale.jina.ai/" rel="noopener" class="external-link" href="https://rationale.jina.ai/" target="_blank">Rationale - a revolutionary decision-making AI powered by the latest GPT and in-context learning</a><br><br><a data-tooltip-position="top" aria-label="https://www.airgram.io/" rel="noopener" class="external-link" href="https://www.airgram.io/" target="_blank">Airgram | AI Assistant for Automated Meeting Notes &amp; Summary</a><br><br><a data-tooltip-position="top" aria-label="https://bloop.ai/" rel="noopener" class="external-link" href="https://bloop.ai/" target="_blank">bloop | Find Code. Fast.</a><br><a data-tooltip-position="top" aria-label="https://v0.dev/" rel="noopener" class="external-link" href="https://v0.dev/" target="_blank">v0 by Vercel</a><br><a data-tooltip-position="top" aria-label="https://screenshottocode.com/" rel="noopener" class="external-link" href="https://screenshottocode.com/" target="_blank">Screenshot to Code</a><br><a data-tooltip-position="top" aria-label="https://devv.ai/zh" rel="noopener" class="external-link" href="https://devv.ai/zh" target="_blank">Devv</a><br><a data-tooltip-position="top" aria-label="https://www.warp.dev/" rel="noopener" class="external-link" href="https://www.warp.dev/" target="_blank">Warp: Your terminal, reimagined</a><br><br><a data-tooltip-position="top" aria-label="https://www.weshop.com/" rel="noopener" class="external-link" href="https://www.weshop.com/" target="_blank">WeShop唯象妙境</a><br><a data-tooltip-position="top" aria-label="https://app.aiwefix.com/login" rel="noopener" class="external-link" href="https://app.aiwefix.com/login" target="_blank">WeFixAI | 工作台</a><br><a data-tooltip-position="top" aria-label="https://motiff.com/" rel="noopener" class="external-link" href="https://motiff.com/" target="_blank">motiff.com</a><br><br><a data-tooltip-position="top" aria-label="https://www.suno.ai/" rel="noopener" class="external-link" href="https://www.suno.ai/" target="_blank">Suno AI</a><br>]]></description><link>💾-科技工程/aigc/awesome-building-blocks.html</link><guid isPermaLink="false">💾 科技工程/AIGC/Awesome Building Blocks.md</guid><pubDate>Tue, 20 Aug 2024 08:43:01 GMT</pubDate></item><item><title><![CDATA[Stable Diffusion 使用指南]]></title><description><![CDATA[ 
  <br>ref:<br>
 <br>《AI 创意绘画与视频制作 - 基于Stable Diffusion和ControlNet》清华大学, 2023.8
 <br><br><br><br><br><br><br>如何使用ControlNet<br>图生文技术简介<br>除了GAN、VAE和Diffusion模型之外. 还有基于Self-Attention, 光流模型、PixelRNN和PixelCNN的图像生成模型. <br>

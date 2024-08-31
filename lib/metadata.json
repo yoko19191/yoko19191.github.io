@@ -1,11 +1,21 @@
 {
   "vaultName": "🌱 Digital-Garden",
-  "lastExport": 1724770819815,
+  "lastExport": 1725112489704,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager native-scrollbars theme-light show-inline-title show-ribbon",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
+    "🌐 软件工程/代码规范.md",
+    "🌐 软件工程/服务型制造研究院_项目.excalidraw-NSConflict-null_yoko-mac14.4.1.md",
+    "🌐 软件工程/排序算法.md",
+    "🌐 软件工程/实用主义者的算法.md",
+    "🌐 软件工程/图算法.md",
+    "🌐 软件工程/CS面试题(知识蒸馏).md",
+    "🌐 软件工程/index_数据结构.md",
+    "🌐 软件工程/index_算法.md",
+    "🌐 软件工程/Leetcode 热题100.md",
+    "🌐 软件工程/Python 代码.md",
     "🎨 文学艺术/莎士比亚.md",
     "🎨 文学艺术/世界现代设计通识课.md",
     "🎨 文学艺术/喜欢的音乐风格.md",
@@ -508,295 +518,295 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/fonts/mathjax_zero.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 1368,
       "exportedPath": "lib/fonts/mathjax_zero.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 34160,
       "exportedPath": "lib/fonts/mathjax_main-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-bold.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 34464,
       "exportedPath": "lib/fonts/mathjax_main-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-italic.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 19360,
       "exportedPath": "lib/fonts/mathjax_math-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-italic.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 20832,
       "exportedPath": "lib/fonts/mathjax_main-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-bolditalic.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 19776,
       "exportedPath": "lib/fonts/mathjax_math-bolditalic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size1-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 5792,
       "exportedPath": "lib/fonts/mathjax_size1-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size2-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 5464,
       "exportedPath": "lib/fonts/mathjax_size2-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size3-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 3244,
       "exportedPath": "lib/fonts/mathjax_size3-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size4-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 5148,
       "exportedPath": "lib/fonts/mathjax_size4-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_ams-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 40808,
       "exportedPath": "lib/fonts/mathjax_ams-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 9600,
       "exportedPath": "lib/fonts/mathjax_calligraphic-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-bold.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 9908,
       "exportedPath": "lib/fonts/mathjax_calligraphic-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 21480,
       "exportedPath": "lib/fonts/mathjax_fraktur-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-bold.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 22340,
       "exportedPath": "lib/fonts/mathjax_fraktur-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 12660,
       "exportedPath": "lib/fonts/mathjax_sansserif-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-bold.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 15944,
       "exportedPath": "lib/fonts/mathjax_sansserif-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-italic.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 14628,
       "exportedPath": "lib/fonts/mathjax_sansserif-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_script-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 11852,
       "exportedPath": "lib/fonts/mathjax_script-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_typewriter-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 17604,
       "exportedPath": "lib/fonts/mathjax_typewriter-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-regular.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 1136,
       "exportedPath": "lib/fonts/mathjax_vector-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-bold.woff": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 1116,
       "exportedPath": "lib/fonts/mathjax_vector-bold.woff",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 40100,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 43983,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 4619,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 5075,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 130471,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 95897,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
@@ -808,13 +818,13 @@
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 236,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
@@ -982,8 +992,8 @@
       "dependencies": []
     },
     "💾 科技工程/4_深度学习.md": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 287747,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 288233,
       "exportedPath": "💾-科技工程/4_深度学习.html",
       "dependencies": []
     },
@@ -1048,14 +1058,14 @@
       "dependencies": []
     },
     "💾 科技工程/AIGC/公文写作.md": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 11066,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 11584,
       "exportedPath": "💾-科技工程/aigc/公文写作.html",
       "dependencies": []
     },
     "💾 科技工程/AIGC/AIGC 企业落地经验.md": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 17,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 184,
       "exportedPath": "💾-科技工程/aigc/aigc-企业落地经验.html",
       "dependencies": []
     },
@@ -1066,14 +1076,14 @@
       "dependencies": []
     },
     "💾 科技工程/5_大模型.md": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 147885,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 183351,
       "exportedPath": "💾-科技工程/5_大模型.html",
       "dependencies": []
     },
     "💾 科技工程/6_AI 系统.md": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 52915,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 53863,
       "exportedPath": "💾-科技工程/6_ai-系统.html",
       "dependencies": []
     },
@@ -1090,8 +1100,8 @@
       "dependencies": []
     },
     "💾 科技工程/9_推荐系统.md": {
-      "modifiedTime": 1724770819815,
-      "sourceSize": 374,
+      "modifiedTime": 1725112489704,
+      "sourceSize": 615,
       "exportedPath": "💾-科技工程/9_推荐系统.html",
       "dependencies": []
     },
@@ -1120,9 +1130,69 @@
       "dependencies": []
     },
     "lib/media/3d6c1bdc4d87cde4de67.svg": {
-      "modifiedTime": 1724770819815,
+      "modifiedTime": 1725112489704,
       "sourceSize": 279,
       "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
+      "dependencies": []
+    },
+    "🌐 软件工程/代码规范.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 518,
+      "exportedPath": "🌐-软件工程/代码规范.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/服务型制造研究院_项目.excalidraw-NSConflict-null_yoko-mac14.4.1.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 9589,
+      "exportedPath": "🌐-软件工程/服务型制造研究院_项目.excalidraw-nsconflict-null_yoko-mac14.4.1.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/排序算法.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 28910,
+      "exportedPath": "🌐-软件工程/排序算法.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/实用主义者的算法.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 142,
+      "exportedPath": "🌐-软件工程/实用主义者的算法.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/图算法.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 7307,
+      "exportedPath": "🌐-软件工程/图算法.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/CS面试题(知识蒸馏).md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 52569,
+      "exportedPath": "🌐-软件工程/cs面试题(知识蒸馏).html",
+      "dependencies": []
+    },
+    "🌐 软件工程/index_数据结构.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 616,
+      "exportedPath": "🌐-软件工程/index_数据结构.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/index_算法.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 14557,
+      "exportedPath": "🌐-软件工程/index_算法.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/Leetcode 热题100.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 16240,
+      "exportedPath": "🌐-软件工程/leetcode-热题100.html",
+      "dependencies": []
+    },
+    "🌐 软件工程/Python 代码.md": {
+      "modifiedTime": 1725112489704,
+      "sourceSize": 885,
+      "exportedPath": "🌐-软件工程/python-代码.html",
       "dependencies": []
     }
   }

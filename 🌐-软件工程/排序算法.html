@@ -1,0 +1,631 @@
+<!DOCTYPE html> <html><head>
+		<title>排序算法</title>
+		<base href="../">
+		<meta id="root-path" root-path="../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="🌱 Digital-Garden - 排序算法">
+		<meta property="og:title" content="排序算法">
+		<meta property="og:description" content="🌱 Digital-Garden - 排序算法">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="🌐-软件工程/排序算法.html">
+		<meta property="og:image" content="https://cdn.sa.net/2024/04/07/j95DlaIoP8C3gMU.png">
+		<meta property="og:site_name" content="🌱 Digital-Garden">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager native-scrollbars theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-mn { display: inline-block; text-align: left; }
+mjx-c.mjx-c1D442.TEX-I::before { padding: 0.704em 0.763em 0.022em 0px; content: "O"; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
+mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c22C5::before { padding: 0.31em 0.278em 0px 0px; content: "⋅"; }
+mjx-c.mjx-c210E.TEX-I::before { padding: 0.694em 0.576em 0.011em 0px; content: "h"; }
+mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
+mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
+mjx-c.mjx-c6C::before { padding: 0.694em 0.278em 0px 0px; content: "l"; }
+mjx-c.mjx-c67::before { padding: 0.453em 0.5em 0.206em 0px; content: "g"; }
+mjx-c.mjx-c2061::before { padding: 0px; content: ""; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > * { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.06em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-msqrt { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-c.mjx-c41::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
+mjx-c.mjx-c74::before { padding: 0.615em 0.389em 0.01em 0px; content: "t"; }
+mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
+mjx-c.mjx-c69::before { padding: 0.669em 0.278em 0px 0px; content: "i"; }
+mjx-c.mjx-c6F::before { padding: 0.448em 0.5em 0.01em 0px; content: "o"; }
+mjx-c.mjx-c1D444.TEX-I::before { padding: 0.704em 0.791em 0.194em 0px; content: "Q"; }
+mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-c.mjx-c1D43E.TEX-I::before { padding: 0.683em 0.889em 0px 0px; content: "K"; }
+mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
+mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
+mjx-c.mjx-c66::before { padding: 0.705em 0.372em 0px 0px; content: "f"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
+mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-c.mjx-c1D458.TEX-I::before { padding: 0.694em 0.521em 0.011em 0px; content: "k"; }
+mjx-c.mjx-c3A6::before { padding: 0.683em 0.722em 0px 0px; content: "Φ"; }
+mjx-c.mjx-c1D719.TEX-I::before { padding: 0.694em 0.596em 0.205em 0px; content: "ϕ"; }
+mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c1D459.TEX-I::before { padding: 0.694em 0.298em 0.011em 0px; content: "l"; }
+mjx-c.mjx-c1D45C.TEX-I::before { padding: 0.441em 0.485em 0.011em 0px; content: "o"; }
+mjx-c.mjx-c1D454.TEX-I::before { padding: 0.442em 0.477em 0.205em 0px; content: "g"; }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c1D441.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "N"; }
+mjx-c.mjx-c2F::before { padding: 0.75em 0.5em 0.25em 0px; content: "/"; }
+mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
+mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="排序算法"><p dir="auto">排序算法</p></h1><div><p dir="auto"><img src="https://cdn.sa.net/2024/04/07/j95DlaIoP8C3gMU.png" referrerpolicy="no-referrer"></p></div><div class="admonition-parent admonition-info-parent"><div class="callout admonition admonition-info admonition-plugin " style="--callout-color: 0, 184, 212;" data-callout="info" data-callout-fold="" data-callout-metadata=""><div class="callout-title admonition-title "><div class="callout-icon admonition-title-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></div><div class="callout-title-inner admonition-title-content">Info</div></div><div class="callout-content admonition-content"><p dir="auto"><a data-tooltip-position="top" aria-label="https://leetcode.cn/problems/sort-an-array/" rel="noopener" class="external-link" href="https://leetcode.cn/problems/sort-an-array/" target="_blank">力扣（LeetCode）- 912</a></p>
+<p dir="auto">给你一个整数数组&nbsp;<code>nums</code>，请你将该数组升序排列。</p>
+<p dir="auto"><strong>示例 1：</strong></p>
+<p dir="auto"><strong>输入：</strong>nums = [5,2,3,1]<br>
+<strong>输出：</strong>[1,2,3,5]</p>
+<p dir="auto"><strong>示例 2：</strong></p>
+<p dir="auto"><strong>输入：</strong>nums = [5,1,1,2,0,0]<br>
+<strong>输出：</strong>[0,0,1,1,2,5]</p>
+<p dir="auto"><strong>提示：</strong></p>
+<ul>
+<li dir="auto"><code>1 &lt;= nums.length &lt;= 5 * 104</code></li>
+<li dir="auto"><code>-5 * 104 &lt;= nums[i] &lt;= 5 * 104</code></li>
+</ul></div></div></div><div><blockquote dir="auto">
+<p>冒泡排序、 选择排序、插入排序是最基础的排序算法,  时间复杂度都是 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>. 但选择算法由于不具备提前终止条件, 实际速度可能会比冒泡、插入要慢. </p>
+</blockquote></div><div class="heading-wrapper"><h3 data-heading="冒泡排序 (Bubble Sort)" dir="auto" class="heading" id="冒泡排序_(Bubble_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>冒泡排序 (Bubble Sort)</h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><strong>算法原理</strong>：冒泡排序会遍历数组多次，每次遍历时，通过比较相邻元素，并在必要时交换它们的位置，从而将较大的元素“冒泡”到数组的末尾。这个过程重复进行，直到没有需要交换的元素为止，这时数组就排序完成了。</li>
+<li data-line="1" dir="auto"><strong>是否原地排序</strong>：是。冒泡排序通过交换相邻元素的位置，不需要额外的存储空间。</li>
+<li data-line="2" dir="auto"><strong>是否比较排序</strong>：是。冒泡排序通过比较相邻元素的值来决定是否需要交换它们的位置。</li>
+<li data-line="3" dir="auto"><strong>是否稳定排序</strong>：是。冒泡排序在交换元素时会保持相等元素的原始顺序。</li>
+<li data-line="4" dir="auto"><strong>实现的算法思想</strong>：冒泡排序主要是基于比较和交换的思想。尽管它不属于特定的算法类别（如分治法、动态规划等），但它体现了迭代思想的简单应用。</li>
+<li data-line="5" dir="auto"><strong>时间复杂度</strong>：平均和最坏的情况都是&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，其中 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>&nbsp;是数组的长度。最好的情况，即数组已经是排序状态，时间复杂度是&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>。</li>
+<li data-line="6" dir="auto"><strong>空间复杂度</strong>：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，因为它是原地排序。</li>
+<li data-line="7" dir="auto"><strong>最差情况</strong>：当输入数组完全逆序时，冒泡排序需要进行最大数量的比较和交换操作。</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="选择排序 (Selection Sort)" dir="auto" class="heading" id="选择排序_(Selection_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>选择排序 (Selection Sort)</h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><strong>算法原理</strong>：选择排序的基本思想是通过多次遍历数组来构建最终的排序数组。在每次遍历过程中，选择出当前未排序部分的最小（或最大）元素，然后将其放到已排序序列的末尾。这个过程不断重复，直到整个数组排序完成。</li>
+<li data-line="1" dir="auto"><strong>是否原地排序</strong>：是。选择排序通过交换元素位置来排序，不需要额外的存储空间。</li>
+<li data-line="2" dir="auto"><strong>是否比较排序</strong>：是。选择排序通过比较元素值来确定每次遍历时未排序部分的最小（或最大）元素。</li>
+<li data-line="3" dir="auto"><strong>是否稳定排序</strong>：否。选择排序在选择最小（或最大）元素放到已排序序列的末尾时，可能会改变相等元素的初始相对顺序。</li>
+<li data-line="4" dir="auto"><strong>实现的算法思想</strong>：选择排序主要基于选择的思想，每次从未排序的部分选择最小（或最大）的元素，然后放到已排序的部分，直到整个数组排序完成。</li>
+<li data-line="5" dir="auto"><strong>时间复杂度</strong>：无论最好、最坏或平均情况，时间复杂度均为&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，其中&nbsp; <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>&nbsp;是数组的长度。这是因为选择排序需要遍历数组找到最小（或最大）元素，并且这个过程需要重复&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span>&nbsp;次。</li>
+<li data-line="6" dir="auto"><strong>空间复杂度</strong>: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，因为它是原地排序，不需要额外的存储空间。</li>
+<li data-line="7" dir="auto"><strong>最差情况</strong>：由于选择排序的时间复杂度在所有情况下都是&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，因此没有特定的最差情况。它的性能不受输入数据的影响。</li>
+</ul></div><div><p dir="auto">选择排序由于其简单直观的特性，在理解和实现上非常容易，但由于其固有的&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>&nbsp;时间复杂度，它不适合用于大规模数据的排序。在实际应用中，更高效的排序算法（如快速排序、归并排序）通常是更好的选择。</p></div><div class="heading-wrapper"><h4 data-heading="堆排序(Heap Sort)" dir="auto" class="heading" id="堆排序(Heap_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>堆排序(Heap Sort)</h4><div class="heading-children"><div><blockquote dir="auto">
+<p>堆排序算法是由J. W. J. Williams在1964年发明的。他提出了这个算法，并且引入了二叉堆的概念作为有效的优先队列结构。他还发明了二叉堆.</p>
+</blockquote></div><div><p dir="auto"><strong>算法原理</strong>:<br>
+堆排序是一种基于比较的排序算法，它利用堆这种数据结构的特性来进行排序。堆是一种完全二叉树，其中每个节点的值都必须大于或等于（最大堆）或小于或等于（最小堆）其子节点的值。堆排序算法可以分解为以下几个主要步骤：</p></div><div><ol>
+<li data-line="0" dir="auto"><strong>构建堆（Heapify）</strong>：将原始数组转换成最大堆（对于升序排序）或最小堆（对于降序排序）。</li>
+<li data-line="1" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>堆调整（Heapsort）</strong>：重复执行以下操作，直到堆的大小为1：
+<ul>
+<li data-line="2" dir="auto">将堆顶元素（最大或最小）与堆的最后一个元素交换。</li>
+<li data-line="3" dir="auto">减小堆的大小，排除掉已经排好的元素。</li>
+<li data-line="4" dir="auto">对堆顶元素进行下沉操作，以恢复堆的性质。</li>
+</ul>
+</li>
+</ol></div><div><ul>
+<li data-line="0" dir="auto"><strong>原地排序</strong>：是。堆排序不需要额外的存储空间，因此是原地排序算法。</li>
+<li data-line="1" dir="auto"><strong>比较排序</strong>：是。堆排序通过比较元素的大小来决定元素的位置。</li>
+<li data-line="2" dir="auto"><strong>稳定排序</strong>：否。堆排序在调整堆的过程中可能会改变相等元素的原始相对顺序，因此它是不稳定的。</li>
+<li data-line="3" dir="auto"><strong>算法思想</strong>：堆排序是基于选择排序的一种改进，其算法思想主要是利用堆这种数据结构来优化选择过程中的查找最大（或最小）元素的操作。它属于选择排序的一种。</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>时间复杂度</strong>：
+<ul>
+<li data-line="5" dir="auto">最好、最坏和平均情况下的时间复杂度都是&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，其中&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>是数组的长度。这是因为构建堆的时间复杂度为&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，而每次调整堆的时间复杂度为&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，共需调整&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span>次。</li>
+</ul>
+</li>
+<li data-line="6" dir="auto"><strong>空间复杂度</strong>：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，因为堆排序是原地排序，不需要额外的存储空间。</li>
+<li data-line="7" dir="auto"><strong>最差时间的情况</strong>: 堆排序的最差时间复杂度是&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，这个情况发生在每次选取最大（或最小）元素后，剩余的元素构成的新堆需要完全重新调整以满足堆的性质时。但由于堆排序的性能主要由堆的高度决定（即&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>），并且在构建和调整堆的过程中，元素的初始排列顺序对时间复杂度的影响不大，因此堆排序的最好、平均和最差时间复杂度都是相同的。</li>
+</ul></div><div><pre class="language-python" tabindex="0"><code class="is-loaded language-python">
+<span class="token keyword">def</span> <span class="token function">heapify</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    largest <span class="token operator">=</span> i
+    left <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">1</span>
+    right <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">2</span>
+
+    <span class="token keyword">if</span> left <span class="token operator">&lt;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> left
+
+    <span class="token keyword">if</span> right <span class="token operator">&lt;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> right
+
+    <span class="token keyword">if</span> largest <span class="token operator">!=</span> i<span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> largest<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">heapSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+
+    <span class="token comment"># Build a maxheap.</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">//</span><span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+
+    <span class="token comment"># One by one extract elements</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Example usage</span>
+arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+heapSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sorted array is:"</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>
+
+</code><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://www.youtube.com/watch?v=cyE9f_49tl8" rel="noopener" class="external-link" href="https://www.youtube.com/watch?v=cyE9f_49tl8" target="_blank">【博士Vlog】LeetCode 912题 优质解法：堆排序解法详解 - YouTube</a></p></div></div></div><div class="heading-wrapper"><h4 data-heading="锦标赛排序（Tournament Sort）" dir="auto" class="heading" id="锦标赛排序（Tournament_Sort）"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>锦标赛排序（Tournament Sort）</h4><div class="heading-children"><div><p dir="auto">锦标赛排序（Tournament Sort）是一种选择排序算法的变体，它通过构建一个锦标赛树（通常是一棵完全二叉树）来选择出最小（或最大）的元素。这种方法在多路归并排序中特别有用，比如，当需要从多个已排序的列表中选择最小的元素以合并成一个新的有序列表时。</p></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>算法原理</strong></p>
+<ul>
+<li data-line="1" dir="auto">锦标赛排序的基本思想是将所有参与排序的元素组织成一个锦标赛的形式，通过比较决出胜者（最小或最大元素），然后移除胜者，将其放入最终的排序结果中，并让被胜者继续参与下一轮的比较，直至所有元素都被排序。</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>步骤
+<ol>
+<li data-line="3" dir="auto"><strong>构建锦标赛树</strong>：将所有待排序的元素构建成一个完全二叉树。如果元素数量不是2的幂，则添加一些“虚拟”节点使其成为完全二叉树。</li>
+<li data-line="4" dir="auto"><strong>进行锦标赛</strong>：在二叉树中，每个节点都与其两个子节点比较，胜者（较小或较大的元素）上升到父节点，一直进行到树的根节点，根节点即为最终的胜者。</li>
+<li data-line="5" dir="auto"><strong>选择胜者</strong>：根节点的元素是当前所有元素中最小（或最大）的，将其选出并放入结果数组中。</li>
+<li data-line="6" dir="auto"><strong>更新锦标赛树</strong>：将刚才胜出的元素从树中移除，用一个足够大（或小）的值替换它，以确保它不会在后续的比赛中胜出。然后重新进行锦标赛，找出下一个最小（或最大）元素。</li>
+<li data-line="7" dir="auto"><strong>重复步骤3和4</strong>，直到所有元素都被选出，排序完成。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li data-line="9" dir="auto">
+<p><strong>原地排序</strong> :  锦标赛排序<strong>不是</strong>原地排序算法。它需要额外的空间来构建锦标赛树，以及在排序过程中暂存数据。</p>
+</li>
+<li data-line="10" dir="auto">
+<p><strong>比较排序</strong>:  锦标赛排序是一种<strong>比较排序</strong>算法。它通过比较元素之间的大小来决定元素的顺序。</p>
+</li>
+<li data-line="11" dir="auto">
+<p><strong>稳定排序</strong>: 锦标赛排序<strong>可以实现为稳定的</strong>，但这取决于具体实现。在构建锦标赛树并选择胜者的过程中，如果处理相等元素的顺序保持一致，则可以保持稳定性；但如果实现不当，稳定性可能会丧失。</p>
+</li>
+<li data-line="12" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>算法思想</strong></p>
+<ul>
+<li data-line="13" dir="auto">锦标赛排序属于<strong>分治法</strong>。它通过将问题分解为多个子问题（即在锦标赛树的每个节点进行比较），然后合并这些子问题的解（选择胜者），以此实现排序。</li>
+</ul>
+</li>
+<li data-line="14" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>时间复杂度</strong></p>
+<ul>
+<li data-line="15" dir="auto"><strong>最好、平均和最坏情况</strong>：锦标赛排序的时间复杂度为<strong>(O(n \log n))</strong>。无论在最好、平均还是最坏的情况下，时间复杂度都保持不变，因为每个元素都需要通过锦标赛树的比较来确定其位置。</li>
+</ul>
+</li>
+<li data-line="16" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>空间复杂度</strong></p>
+<ul>
+<li data-line="17" dir="auto">锦标赛排序的空间复杂度为<strong>(O(n))</strong>。需要额外的空间来构建锦标赛树，尽管树的大小与输入数组的大小成正比，但这意味着它需要比原地排序算法更多的内存。</li>
+</ul>
+</li>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>最坏情况</strong></p>
+<ul>
+<li data-line="19" dir="auto">锦标赛排序的最坏情况时间复杂度仍然是<strong>(O(n \log n))</strong>，这与最好和平均情况相同。最坏情况发生的原因不是因为数据的不同排列，而是因为算法的结构决定了其性能特点。</li>
+</ul>
+</li>
+</ul></div><div><p dir="auto">总的来说，锦标赛排序是一种比较独特的排序算法，它通过构建锦标赛树来逐步筛选出最小（或最大）元素。虽然它的时间复杂度与其他高效的比较排序算法（如快速排序、归并排序）相当，但由于其较高的空间复杂度和实现复杂性，它在实际应用中不如这些更为流行的算法。然而，在某些特定场景下，如多路归并排序，锦标赛排序提供了一种有趣且有效的解决方案。</p></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="插入排序 (Insertion Sort)" dir="auto" class="heading" id="插入排序_(Insertion_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>插入排序 (Insertion Sort)</h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><strong>算法原理</strong>：插入排序的工作方式类似于我们排序打扑克牌。它将数组分为已排序和未排序两部分，每次从未排序的部分取出第一个元素，将它插入到已排序部分的适当位置上，以保持已排序部分总是有序的。过程重复，直到未排序的部分为空。</li>
+<li data-line="1" dir="auto"><strong>是否原地排序</strong>：是。插入排序通过在数组内移动元素来达到排序的目的，不需要额外的存储空间。</li>
+<li data-line="2" dir="auto"><strong>是否比较排序</strong>：是。插入排序通过比较元素值来决定元素之间的相对顺序。</li>
+<li data-line="3" dir="auto"><strong>是否稳定排序</strong>：是。插入排序在插入元素时保持相等元素的初始相对顺序，因此是稳定的。</li>
+<li data-line="4" dir="auto"><strong>实现的算法思想</strong>：插入排序利用了分治的思想，通过构建一个逐步增长的已排序部分来实现整体的排序。</li>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>时间复杂度</strong>：
+<ul>
+<li data-line="6" dir="auto">最好情况：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，当输入数组已经是有序的，每次插入都不需要移动已排序部分的元素。</li>
+<li data-line="7" dir="auto">平均情况和最坏情况：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，在这些情况下，插入元素可能需要移动已排序部分的多个元素来找到合适的插入位置。</li>
+</ul>
+</li>
+<li data-line="8" dir="auto"><strong>空间复杂度</strong>：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，插入排序是原地排序算法，不需要额外的存储空间。</li>
+<li data-line="9" dir="auto"><strong>最差情况</strong>：当输入数组完全逆序时，每次插入都要移动所有已排序的元素，这是插入排序的最差情况。</li>
+</ul></div><div><p dir="auto">插入排序虽然在最坏情况下的时间复杂度与选择排序和冒泡排序相同，但在部分有序的数组或小规模数据集上，它通常表现得更好，因为它可以提前终止内层循环。此外，由于其稳定性，插入排序在某些特定应用中（如需要保持相等元素相对顺序的场景）是非常有用的。</p></div><div class="heading-wrapper"><h4 data-heading="希尔排序（Shell Sort）" dir="auto" class="heading" id="希尔排序（Shell_Sort）"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>希尔排序（Shell Sort）</h4><div class="heading-children"><div><p dir="auto">希尔排序（Shell Sort）是一种基于插入排序的算法，通过引入“增量”概念来改进插入排序的性能。它是由Donald Shell于1959年提出的。希尔排序的核心思想是将原始列表分成多个子列表，每个子列表包含位于原始列表中等距离（增量）的元素，并对每个子列表进行插入排序。随着算法的进行，增量会逐步减少，最终减少到1，整个列表就变成了基本有序的状态，最后一次插入排序将使得列表完全有序。</p></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>算法原理</strong></p>
+<ol>
+<li data-line="1" dir="auto"><strong>选择增量</strong>：增量序列的选择对算法的性能有很大影响。最初的增量序列可以是<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math></mjx-container></span>，之后每次减半，直到增量为1。</li>
+<li data-line="2" dir="auto"><strong>进行插入排序</strong>：对于每个增量 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>，将列表分成 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 个子列表，每个子列表由距离为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的元素组成。对每个子列表进行插入排序。</li>
+<li data-line="3" dir="auto"><strong>减少增量</strong>：减少增量的值，并重复上述步骤，直到增量为1，最后进行一次标准的插入排序。</li>
+</ol>
+</li>
+<li data-line="5" dir="auto">
+<p><strong>原地排序</strong>：是。希尔排序不需要额外的存储空间，因此是原地排序算法。</p>
+</li>
+<li data-line="6" dir="auto">
+<p><strong>比较排序</strong>：是。希尔排序通过比较元素的大小来决定元素的位置。</p>
+</li>
+<li data-line="7" dir="auto">
+<p><strong>稳定排序</strong>：否。由于希尔排序在不同增量的阶段中可能会改变相等元素的原始相对顺序，因此它是不稳定的。</p>
+</li>
+<li data-line="8" dir="auto">
+<p><strong>算法思想</strong>：希尔排序是插入排序的一种高效版本，属于分组插入排序。算法的思想是通过预排序（使用较大增量时的插入排序）来改善插入排序在面对大规模乱序列表时的性能。</p>
+</li>
+<li data-line="9" dir="auto">
+<p><strong>时间复杂度</strong>：希尔排序的时间复杂度依赖于增量序列的选择。最坏情况下的时间复杂度可以达到<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，但对于某些特定的增量序列，时间复杂度可以降低到<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>或更低。</p>
+</li>
+<li data-line="10" dir="auto">
+<p><strong>空间复杂度</strong>：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，因为希尔排序是原地排序。</p>
+</li>
+<li data-line="11" dir="auto">
+<p><strong>最差时间的情况</strong>:  希尔排序的最差时间复杂度通常发生在最坏的增量序列选择下。如果增量序列不是最优的，算法的效率会大大降低。例如，如果增量序列仅仅是简单地每次减半，那么在某些情况下，算法的时间复杂度可能接近<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>。然而，通过合理选择增量序列，可以显著提高希尔排序的性能。</p>
+</li>
+</ul></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="归并排序 (Merge Sort)" dir="auto" class="heading" id="归并排序_(Merge_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>归并排序 (Merge Sort)</h3><div class="heading-children"><div><p dir="auto">归并排序（Merge Sort）是一种高效、稳定的排序算法，基于分治法（Divide and Conquer）的原理。它将一个数组分成两半，对每一半递归地应用归并排序，然后将两个排序好的半部分合并成一个完整的排序数组。归并排序在最坏情况、最好情况和平均情况下都能保持(O(n \log n))的时间复杂度，其中(n)是数组的长度。</p></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>算法与案例</strong>
+<ol>
+<li data-line="1" dir="auto"><strong>分解</strong>：将当前序列分成两个长度几乎相等的子序列。</li>
+<li data-line="2" dir="auto"><strong>递归排序</strong>：递归地对两个子序列进行归并排序。</li>
+<li data-line="3" dir="auto"><strong>合并（Merge）</strong>：将两个排序好的子序列合并成一个最终的排序序列。</li>
+</ol>
+</li>
+</ul></div><div><p dir="auto">归并操作是归并排序算法中最重要的步骤，它将两个已排序的序列合并成一个序列。合并步骤通常通过一个临时数组来辅助完成。</p></div><div><ul>
+<li data-line="0" dir="auto"><strong>稳定排序</strong>：是。归并排序保持了相等元素之间的相对顺序，因此它是稳定的排序算法。</li>
+<li data-line="1" dir="auto"><strong>非原地排序</strong>：通常不是。归并排序需要一个与原数组相同大小的临时数组来存放在合并过程中创建的排序数组，因此它通常不是原地排序算法。</li>
+<li data-line="2" dir="auto"><strong>算法思想</strong>：归并排序是典型的分治策略应用，它将问题分解为易于解决的子问题，解决子问题后再将结果合并以解决原问题。</li>
+<li data-line="3" dir="auto"><strong>时间复杂度</strong>：无论是最好、最坏还是平均情况，时间复杂度都是<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>。</li>
+<li data-line="4" dir="auto"><strong>空间复杂度</strong>：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，主要是因为合并过程需要等大小的额外空间。</li>
+<li data-line="5" dir="auto"><strong>最差时间的情况</strong>:<br>
+由于归并排序的性能主要由分解和合并操作决定，而这些操作的时间复杂度与输入数组的实际顺序无关，因此归并排序的时间复杂度在最好、平均和最坏情况下都是<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>。这意味着归并排序没有特定的“最差情况”场景，它的性能相对于输入数据的大小是稳定的。</li>
+</ul></div><div><pre class="language-python" tabindex="0"><code class="is-loaded language-python"><span class="token keyword">def</span> <span class="token function">merge_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>  <span class="token comment"># 找到中间位置，进行分割</span>
+        left_half <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span>
+        right_half <span class="token operator">=</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
+
+        merge_sort<span class="token punctuation">(</span>left_half<span class="token punctuation">)</span>  <span class="token comment"># 递归排序左半部分</span>
+        merge_sort<span class="token punctuation">(</span>right_half<span class="token punctuation">)</span>  <span class="token comment"># 递归排序右半部分</span>
+
+        <span class="token comment"># 合并两个有序子数组</span>
+        i <span class="token operator">=</span> j <span class="token operator">=</span> k <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token comment"># 当两个子数组都还有元素时</span>
+        <span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>left_half<span class="token punctuation">)</span> <span class="token keyword">and</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>right_half<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> left_half<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> right_half<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> left_half<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                i <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> right_half<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+                j <span class="token operator">+=</span> <span class="token number">1</span>
+            k <span class="token operator">+=</span> <span class="token number">1</span>
+
+        <span class="token comment"># 处理左侧子数组中剩余的元素</span>
+        <span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>left_half<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> left_half<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+            k <span class="token operator">+=</span> <span class="token number">1</span>
+
+        <span class="token comment"># 处理右侧子数组中剩余的元素</span>
+        <span class="token keyword">while</span> j <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>right_half<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> right_half<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+            j <span class="token operator">+=</span> <span class="token number">1</span>
+            k <span class="token operator">+=</span> <span class="token number">1</span>
+
+<span class="token comment"># 示例数组</span>
+arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"原始数组:"</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>
+
+merge_sort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的数组:"</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>
+
+</code><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h3 data-heading="快速排序 (Quick Sort)" dir="auto" class="heading" id="快速排序_(Quick_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>快速排序 (Quick Sort)</h3><div class="heading-children"><div class="admonition-parent admonition-caution-parent"><div class="callout admonition admonition-caution admonition-plugin " style="--callout-color: 255, 145, 0;" data-callout="caution" data-callout-fold="" data-callout-metadata=""><div class="callout-title admonition-title "><div class="callout-icon admonition-title-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg></div><div class="callout-title-inner admonition-title-content">Caution</div></div><div class="callout-content admonition-content"><p dir="auto">无脑唆哈, 看见排序直接快排</p></div></div></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>算法原理</strong>：快速排序使用分治法的策略来把一个序列分为两个子序列。步骤为：
+<ol>
+<li data-line="1" dir="auto">从序列中挑出一个元素，称为 "基准"（pivot）。</li>
+<li data-line="2" dir="auto">重新排序序列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于序列的中间位置。这个称为分区（partition）操作。</li>
+<li data-line="3" dir="auto">递归地（recursive）把小于基准值元素的子序列和大于基准值元素的子序列排序。</li>
+</ol>
+</li>
+<li data-line="4" dir="auto"><strong>是否原地排序</strong>：是。快速排序在分区过程中，通过交换元素位置，不需要额外的存储空间。</li>
+<li data-line="5" dir="auto"><strong>是否比较排序</strong>：是。快速排序通过比较元素值来决定它们的相对位置。</li>
+<li data-line="6" dir="auto"><strong>是否稳定排序</strong>：否。快速排序在分区过程中可能会改变相等元素的初始相对顺序。</li>
+<li data-line="7" dir="auto"><strong>实现的算法思想</strong>：分治法。快速排序通过分治法将一个大问题分解为小问题来递归地解决。</li>
+<li data-line="8" dir="auto"><strong>时间复杂度</strong>：平均情况下，时间复杂度为&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，最坏情况（如每次分区选择的基准都是最小或最大元素）下，时间复杂度为&nbsp;<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>。最好情况（分区平衡）下，时间复杂度也是<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>&nbsp;。</li>
+<li data-line="9" dir="auto"><strong>空间复杂度</strong>：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，主要是递归调用的栈空间。</li>
+<li data-line="10" dir="auto"><strong>最差情况</strong>：当输入数组已经是正序或逆序时，每次分区只能减少一个元素，导致递归深度达到最大，这时快速排序的性能最差。</li>
+</ul></div><div><p dir="auto">快速排序是一种非常高效的排序算法，尤其是在平均情况下，但它的性能依赖于基准的选择。</p></div><div><pre class="language-python" tabindex="0"><code class="is-loaded language-python">
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+	<span class="token keyword">def</span> <span class="token function">sortArray</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+		<span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">:</span> <span class="token keyword">return</span> nums
+
+		pivot <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+
+		left<span class="token punctuation">,</span> mid<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+		<span class="token keyword">for</span> i <span class="token keyword">in</span> nums<span class="token punctuation">:</span>
+			<span class="token keyword">if</span> i <span class="token operator">&gt;</span> pivot <span class="token punctuation">:</span> right<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+			<span class="token keyword">elif</span> i <span class="token operator">&lt;</span> pivot <span class="token punctuation">:</span> left<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+			<span class="token keyword">else</span><span class="token punctuation">:</span> mid<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+			
+		<span class="token keyword">return</span> self<span class="token punctuation">.</span>sortArray<span class="token punctuation">(</span>left<span class="token punctuation">)</span> <span class="token operator">+</span> mid <span class="token operator">+</span> self<span class="token punctuation">.</span>sortArray<span class="token punctuation">(</span>right<span class="token punctuation">)</span>
+
+</code><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h3 data-heading="桶排序 (Bucket Sort)" dir="auto" class="heading" id="桶排序_(Bucket_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>桶排序 (Bucket Sort)</h3><div class="heading-children"><div><blockquote dir="auto">
+<p><strong>适用场景</strong>:  数据分布在一定范围中</p>
+</blockquote></div><div><p dir="auto">桶排序（Bucket Sort）是一种分布式排序算法，它将元素分布到若干个称为“桶”的区间中，然后对每个桶中的元素进行排序，最后将各个桶中的元素依次取出，组成一个有序的数组。桶排序非常适合用在输入数据均匀分布在一个范围内的场景。</p></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>算法原理</strong>
+<ol>
+<li data-line="1" dir="auto"><strong>初始化桶</strong>：根据预设或输入数据的特点，创建若干个桶。</li>
+<li data-line="2" dir="auto"><strong>分配元素到桶中</strong>：遍历输入数组，根据某种映射函数，将每个元素分配到对应的桶中。</li>
+<li data-line="3" dir="auto"><strong>对每个桶内部进行排序</strong>：可以使用不同的排序算法对桶内元素进行排序，例如快速排序、插入排序等。</li>
+<li data-line="4" dir="auto"><strong>合并桶</strong>：按照顺序依次将各个桶中的元素取出，放入原数组或新数组中，得到有序数组。</li>
+</ol>
+</li>
+<li data-line="5" dir="auto"><strong>非比较排序</strong>：桶排序不直接比较元素之间的大小关系，而是通过元素的分布将它们分到不同的桶中。</li>
+<li data-line="6" dir="auto"><strong>时间复杂度</strong>：在最佳情况下，当输入的数据可以均匀地分配到每个桶中时，桶排序的时间复杂度为(O(n+k))，其中(n)是元素数量，(k)是桶的数量。在最坏的情况下，所有元素都分配到同一个桶中，时间复杂度退化为(O(n^2))。</li>
+<li data-line="7" dir="auto"><strong>空间复杂度</strong>：(O(n+k))，需要额外的空间来创建桶和存储桶内元素。</li>
+<li data-line="8" dir="auto"><strong>稳定性</strong>：桶排序可以是稳定的，这取决于桶内排序算法的稳定性。</li>
+</ul></div><div><pre class="language-python" tabindex="0"><code class="is-loaded language-python"><span class="token keyword">def</span> <span class="token function">bucket_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> bucketSize<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> arr
+
+    <span class="token comment"># 找到最大值和最小值，确定桶的数量</span>
+    minValue <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    maxValue <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    bucketCount <span class="token operator">=</span> <span class="token punctuation">(</span>maxValue <span class="token operator">-</span> minValue<span class="token punctuation">)</span> <span class="token operator">//</span> bucketSize <span class="token operator">+</span> <span class="token number">1</span>
+    buckets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>bucketCount<span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># 将数组中的值分配到各个桶里</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        bucketIndex <span class="token operator">=</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> minValue<span class="token punctuation">)</span> <span class="token operator">//</span> bucketSize
+        buckets<span class="token punctuation">[</span>bucketIndex<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 对每个桶进行排序，然后合并结果</span>
+    arr<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> bucket <span class="token keyword">in</span> buckets<span class="token punctuation">:</span>
+        bucket<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 这里可以使用不同的排序算法</span>
+        arr<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>bucket<span class="token punctuation">)</span>
+
+<span class="token comment"># 示例</span>
+arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4.2</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">1.6</span><span class="token punctuation">,</span> <span class="token number">3.8</span><span class="token punctuation">,</span> <span class="token number">2.7</span><span class="token punctuation">,</span> <span class="token number">9.8</span><span class="token punctuation">,</span> <span class="token number">7.1</span><span class="token punctuation">,</span> <span class="token number">8.6</span><span class="token punctuation">,</span> <span class="token number">6.7</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"原始数组:"</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>
+
+bucket_sort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> bucketSize<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"排序后的数组:"</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>
+
+</code><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">这个实现首先计算了最大值和最小值，以确定桶的数量和范围。然后，遍历输入数组，根据元素值将它们分配到相应的桶中。之后，对每个桶内的元素进行排序（这里简单地使用了Python的内置排序），最后按顺序合并所有桶中的元素。</p></div><div><p dir="auto">桶排序的效率和桶的大小及分布有很大关系。在实际应用中，选择合适的桶大小和分布策略是优化桶排序性能的关键。</p></div><div class="heading-wrapper"><h4 data-heading="基数排序(Radix Sort)" dir="auto" class="heading" id="基数排序(Radix_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>基数排序(Radix Sort)</h4><div class="heading-children"><div><blockquote dir="auto">
+<p><strong>适用场景</strong>: 大范围或多位数的整数排序</p>
+</blockquote></div><div><p dir="auto">基数排序（Radix Sort）是一种非比较的排序算法，它通过分别对整数的每个位进行排序来整体排序整个数组。这种方法对于大量数据进行排序时非常有效，尤其是当数字的位数不是很高时。基数排序可以用两种方法实现：最低位优先（LSD）和最高位优先（MSD）。</p></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>算法原理</strong></p>
+<ul>
+<li data-line="1" dir="auto">基数排序的基本思想是将整数按位切割成不同的数字，然后按每个位分别进行排序。这个过程可以从最低位开始，也可以从最高位开始。</li>
+</ul>
+<ol>
+<li data-line="2" dir="auto"><strong>最低位优先（LSD）</strong>：首先根据数字的最低位进行排序，然后是次低位，依此类推，直到最高位。每一次排序都是稳定的，以保证之前位的排序结果不会被破坏。</li>
+<li data-line="3" dir="auto"><strong>最高位优先（MSD）</strong>：首先根据数字的最高位进行排序，然后递归地对每个桶中的数据根据次高位进行排序，依此类推，直到最低位。MSD的实现通常使用递归。</li>
+</ol>
+</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>是否原地排序</strong></p>
+<ul>
+<li data-line="5" dir="auto">基数排序<strong>不是原地排序</strong>算法。在排序过程中，它需要额外的空间来存储临时的排序结果。</li>
+</ul>
+</li>
+<li data-line="6" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>比较排序</strong></p>
+<ul>
+<li data-line="7" dir="auto">基数排序<strong>不是比较排序</strong>。它不通过比较元素之间的大小来决定顺序，而是通过将数字分解成不同的位来实现排序。</li>
+</ul>
+</li>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>稳定排序</strong></p>
+<ul>
+<li data-line="9" dir="auto">基数排序<strong>可以实现为稳定排序</strong>。通过在每一位的排序过程中使用稳定的排序算法（如计数排序）来保证排序的稳定性。</li>
+</ul>
+</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>算法思想</strong></p>
+<ul>
+<li data-line="11" dir="auto">基数排序基于<strong>桶排序</strong>的思想，通过将整数分解为不同的位，然后对每一位使用稳定排序算法进行排序。</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>时间复杂度</strong></p>
+<ul>
+<li data-line="13" dir="auto">最好、平均和最坏情况<strong>：基数排序的时间复杂度为</strong>O(nk)**，其中(n)是数组长度，(k)是数字的最大位数。</li>
+</ul>
+</li>
+<li data-line="14" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>空间复杂度</strong></p>
+<ul>
+<li data-line="15" dir="auto">基数排序的空间复杂度为<strong>O(n + k)</strong>，其中(n)是数组长度，(k)是基数（例如，十进制排序中的基数是10）。</li>
+</ul>
+</li>
+<li data-line="16" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>应用场景</strong><br>
+基数排序适用于：</p>
+<ul>
+<li data-line="18" dir="auto">数字的位数相对较小的情况，如电话号码、身份证号码等。</li>
+<li data-line="19" dir="auto">当数据范围很大而直接使用比较排序算法会导致较高时间复杂度时。</li>
+<li data-line="20" dir="auto">当需要稳定排序时。</li>
+</ul>
+<p>基数排序的效率高于传统的比较排序算法（如快速排序、归并排序等），尤其是在处理大量数据时。然而，它对于数据的类型和范围有特定的要求，并且需要额外的空间来进行排序。</p>
+</li>
+</ul></div><div class="admonition-parent admonition-warning-parent"><div class="callout admonition admonition-warning admonition-plugin " style="--callout-color: 255, 145, 0;" data-callout="warning" data-callout-fold="" data-callout-metadata=""><div class="callout-title admonition-title "><div class="callout-icon admonition-title-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg></div><div class="callout-title-inner admonition-title-content">Warning</div></div><div class="callout-content admonition-content"><p dir="auto">计数排序和基数排序使用于特殊序列的排序, 适用场景较小, 实现难度较高</p></div></div></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="计数排序 (Counting Sort)" dir="auto" class="heading" id="计数排序_(Counting_Sort)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>计数排序 (Counting Sort)</h3><div class="heading-children"><div><blockquote dir="auto">
+<p><strong>适用场景</strong>: 计数排序适用于小范围整数的排序</p>
+</blockquote></div><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>算法原理</strong><br>
+计数排序工作原理基于一个简单的事实：如果你知道了比某个数小的数的个数，那么你就能确定这个数在排序后数组的位置。</p>
+<ol>
+<li data-line="3" dir="auto"><strong>计数阶段</strong>：首先，遍历输入数组，统计每个值的出现次数，并将计数存储在一个临时数组中，该数组的索引对应输入数组中的数值。</li>
+<li data-line="4" dir="auto"><strong>累加阶段</strong>：然后，对这个临时数组做一次累加操作。累加后，每个索引的值表示在排序数组中，小于或等于该索引值的元素数量。</li>
+<li data-line="5" dir="auto"><strong>排序阶段</strong>：最后，遍历输入数组，根据累加数组中的计数，将每个元素放到排序后数组的正确位置上，同时更新累加数组中的计数。</li>
+</ol>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>是否原地排序</p>
+<ul>
+<li data-line="8" dir="auto">计数排序<strong>不是原地排序</strong>算法。它需要额外的空间来存储计数数组和排序后的结果。</li>
+</ul>
+</li>
+<li data-line="9" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>比较排序</p>
+<ul>
+<li data-line="10" dir="auto">计数排序<strong>不是比较排序</strong>。它不通过比较元素之间的大小来决定其顺序，而是通过计数和索引来确定每个元素的正确位置。</li>
+</ul>
+</li>
+<li data-line="11" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>稳定排序</p>
+<ul>
+<li data-line="12" dir="auto">计数排序<strong>可以实现为稳定排序</strong>。如果在排序阶段，从后向前遍历输入数组（逆序遍历），并且正确更新累加数组中的计数，就可以保持相同元素的原始顺序，从而保持排序的稳定性。</li>
+</ul>
+</li>
+<li data-line="13" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>算法思想</p>
+<ul>
+<li data-line="14" dir="auto">计数排序的算法思想基于<strong>哈希表</strong>，其中键（Key）是观察到的元素，值（Value）是该元素出现的次数。然后通过对计数进行累加，将这些计数转换为排序后数组中的位置索引。</li>
+</ul>
+</li>
+<li data-line="15" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>时间复杂度</p>
+<ul>
+<li data-line="16" dir="auto"><strong>最好、平均和最坏情况</strong>：计数排序的时间复杂度为<strong>O(n + k)</strong>，其中(n)是数组长度，(k)是数组中数据的范围。</li>
+</ul>
+</li>
+<li data-line="17" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>空间复杂度</p>
+<ul>
+<li data-line="18" dir="auto">计数排序的空间复杂度为<strong>O(k)</strong>，其中(k)是数组中数据的范围。</li>
+</ul>
+</li>
+<li data-line="19" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>应用场景</p>
+<ul>
+<li data-line="20" dir="auto">计数排序非常适合于那些数据范围不大的场景。例如，排序的元素是小范围的整数，或者当你有关于数据范围的先验知识时。由于其线性时间复杂度，它在这些情况下比基于比较的排序算法（如快速排序、归并排序）要快得多。然而，当(k)（数据范围）相对于(n)（数据量）非常大时，计数排序的空间需求和效率可能会成为问题。</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h2 data-heading="TimSort" dir="auto" class="heading" id="TimSort"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>TimSort</h2><div class="heading-children"><div><p dir="auto"><img src="https://pic4.zhimg.com/80/v2-d7c93dd7d67ae9654918923a760f38fd_1440w.webp" referrerpolicy="no-referrer"></p></div><div><ul>
+<li data-line="0" dir="auto">Python的首席开发者Tim Peters在2002年发明了 Tim Sort, 是多种语言的默认算法</li>
+<li data-line="1" dir="auto">稳定排序(排序后相等元素相对位置不变) , 在包含有序子数组的数据中特别有效 ⬅️ 所以特别适合真实数据</li>
+<li data-line="2" dir="auto">Tim Sort 是多种算法的融合主要是，先拆序列，然后对子序列进行插入排序，然后用优化后归并排序合并子序列。下面是算法的具体步骤：<a data-tooltip-position="top" aria-label="https://www.infopulse.com/blog/timsort-sorting-algorithm" rel="noopener" class="external-link" href="https://www.infopulse.com/blog/timsort-sorting-algorithm" target="_blank">Timsort Sorting Algorithm - Infopulse</a></li>
+</ul></div><div><p dir="auto">对于数组长度为 N 的数组 nums，有遮掩的步骤：</p></div><div><ol>
+<li data-line="0" dir="auto">选择拆封字数组的长度 minirun. minirun 不能太大，因为插入排序只对小数组有效。不能太小，这样会导致之后归并的小数组太多。还最后是 N / minirun = 2的幂，因为归并对相同长度的数组最有效。作者在实验中发现 minirun 在 32-64 之间效率最高</li>
+</ol></div><div><p dir="auto">....</p></div><div><ul>
+<li data-line="0" dir="auto">TimSort 的具体实现，在面对不同数据特性时还有很多优化技巧</li>
+</ul></div><div class="mod-footer"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="🌐-软件工程/排序算法.html#排序算法"><div class="tree-item-contents heading-link" heading-name="排序算法"><span class="tree-item-title">排序算法</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/排序算法.html#冒泡排序_(Bubble_Sort)"><div class="tree-item-contents heading-link" heading-name="冒泡排序 (Bubble Sort)"><span class="tree-item-title">冒泡排序 (Bubble Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/排序算法.html#选择排序_(Selection_Sort)"><div class="tree-item-contents heading-link" heading-name="选择排序 (Selection Sort)"><span class="tree-item-title">选择排序 (Selection Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="🌐-软件工程/排序算法.html#堆排序(Heap_Sort)"><div class="tree-item-contents heading-link" heading-name="堆排序(Heap Sort)"><span class="tree-item-title">堆排序(Heap Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="🌐-软件工程/排序算法.html#锦标赛排序（Tournament_Sort）"><div class="tree-item-contents heading-link" heading-name="锦标赛排序（Tournament Sort）"><span class="tree-item-title">锦标赛排序（Tournament Sort）</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/排序算法.html#插入排序_(Insertion_Sort)"><div class="tree-item-contents heading-link" heading-name="插入排序 (Insertion Sort)"><span class="tree-item-title">插入排序 (Insertion Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="🌐-软件工程/排序算法.html#希尔排序（Shell_Sort）"><div class="tree-item-contents heading-link" heading-name="希尔排序（Shell Sort）"><span class="tree-item-title">希尔排序（Shell Sort）</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/排序算法.html#归并排序_(Merge_Sort)"><div class="tree-item-contents heading-link" heading-name="归并排序 (Merge Sort)"><span class="tree-item-title">归并排序 (Merge Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/排序算法.html#快速排序_(Quick_Sort)"><div class="tree-item-contents heading-link" heading-name="快速排序 (Quick Sort)"><span class="tree-item-title">快速排序 (Quick Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/排序算法.html#桶排序_(Bucket_Sort)"><div class="tree-item-contents heading-link" heading-name="桶排序 (Bucket Sort)"><span class="tree-item-title">桶排序 (Bucket Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="🌐-软件工程/排序算法.html#基数排序(Radix_Sort)"><div class="tree-item-contents heading-link" heading-name="基数排序(Radix Sort)"><span class="tree-item-title">基数排序(Radix Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="🌐-软件工程/排序算法.html#计数排序_(Counting_Sort)"><div class="tree-item-contents heading-link" heading-name="计数排序 (Counting Sort)"><span class="tree-item-title">计数排序 (Counting Sort)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="🌐-软件工程/排序算法.html#TimSort"><div class="tree-item-contents heading-link" heading-name="TimSort"><span class="tree-item-title">TimSort</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
